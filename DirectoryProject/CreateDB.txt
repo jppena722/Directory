@@ -1,0 +1,75 @@
+CREATE TABLE Lineanegocios (
+ IdLineanegocio serial PRIMARY KEY,
+ NombreLineanegocio VARCHAR (200) UNIQUE NOT NULL
+);
+
+CREATE TABLE Direcciones (
+ IdDireccion serial PRIMARY KEY,
+ NombreDireccion VARCHAR (200) UNIQUE NOT NULL
+);
+
+CREATE TABLE Roles (
+ IdRol serial PRIMARY KEY,
+ NombreRol VARCHAR (200) UNIQUE NOT NULL
+);
+
+CREATE TABLE Tipodocumentos (
+ IdTipodocumento serial PRIMARY KEY,
+ NombreTipodocumento VARCHAR (200) UNIQUE NOT NULL
+);
+
+CREATE TABLE Estados (
+ IdEstado serial PRIMARY KEY,
+ NombreEstado VARCHAR (200) UNIQUE NOT NULL
+);
+
+CREATE TABLE Direcciones (
+ IdDireccion serial PRIMARY KEY,
+ NombreDireccion VARCHAR (200) UNIQUE NOT NULL
+);
+
+CREATE TABLE Colaboradores (
+ IdCodigoColaborador INTEGER NOT NULL,
+ NombresColaborador VARCHAR(100) NOT NULL,
+ ApellidosColaborador VARCHAR(100) NOT NULL,
+ IdTipodocumentoColaborador INTEGER NOT NULL,
+ NumerodocumentoColaborador VARCHAR(20) NOT NULL,
+ IdEstadoColaborador INTEGER NOT NULL,
+ IdRolColaborador INTEGER NOT NULL,
+ CorreoColaborador VARCHAR(100) NOT NULL,
+ MovilColaborador VARCHAR(100) NOT NULL,
+ PisoColaborador VARCHAR(100),
+ PuestoColaborador VARCHAR(100),
+ FechaingresoColaborador DATE NOT NULL,
+ SalarioColaborador INTEGER, 
+ TarifarealColaborador INTEGER,
+ IngresoxclaroColaborador INTEGER,
+ PRIMARY KEY (IdCodigoColaborador,IdTipodocumentoColaborador,IdEstadoColaborador,IdRolColaborador),
+ FOREIGN KEY (IdTipodocumentoColaborador) REFERENCES Tipodocumentos (IdTipodocumento),
+ FOREIGN KEY (IdEstadoColaborador) REFERENCES Estados (IdEstado),
+ FOREIGN KEY (IdRolColaborador) REFERENCES Roles (IdRol)
+);
+
+CREATE TABLE Proyectos(
+ IdProyecto serial,
+ NombreProyecto VARCHAR (200) UNIQUE NOT NULL,
+ IdLineanegocioProyecto INTEGER NOT NULL,
+ IdDireccionProyecto INTEGER NOT NULL,
+ IdGerenteProyecto INTEGER,
+ PRIMARY KEY (IdProyeceto,IdLineanegocioProyecto,IdDireccionProyecto,IdGerenteProyecto),
+ FOREIGN KEY (IdLineanegocioProyecto) REFERENCES Lineanegocios (IdLineanegocio),
+ FOREIGN KEY (IdDireccionProyecto) REFERENCES Direcciones (IdDireccion),
+ FOREIGN KEY (IdGerenteProyecto) REFERENCES Colaboradores (IdCodigoColaborador)
+);
+
+CREATE TABLE Proyectos_Colaboradores (
+  IdProyecto integer NOT NULL,
+  IdCodigoColaborador integer NOT NULL,
+  PRIMARY KEY (IdProyecto, IdCodigoColaborador),
+  CONSTRAINT Proyectos_Colaboradores_IdProyecto_fkey FOREIGN KEY (IdProyecto)
+      REFERENCES Proyectos (IdProyectos) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT Proyectos_Colaboradores_IdCodigoColaborador_fkey FOREIGN KEY (IdCodigoColaborador)
+      REFERENCES Colaboradores (IdCodigoColaborador) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+);
