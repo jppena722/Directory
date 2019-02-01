@@ -29,17 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Nombre Colaborador");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Codigo Colaborador ");
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Estado Colaborador");
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("Colaboradores");
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("Proyectos ");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Mis proyectos Asignados"}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.Window, null);
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Nombre Colaborador");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Codigo Colaborador ");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Estado Colaborador");
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,19 +41,23 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Acciones = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Acciones2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.nombrescolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoscolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.directoryDBDataSet = new WindowsFormsApp1.DirectoryDBDataSet();
             this.directoryDBDataSet1 = new WindowsFormsApp1.DirectoryDBDataSet();
             this.dataTable1TableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.DataTable1TableAdapter();
-            this.idcodigocolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrescolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoscolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correocolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.movilcolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreestadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrerolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Acciones = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Acciones2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nombreestadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movilcolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correocolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcodigocolaboradorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -98,40 +96,12 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.listView1);
+            this.splitContainer1.Panel2.Controls.Add(this.button6);
+            this.splitContainer1.Panel2.Controls.Add(this.button5);
+            this.splitContainer1.Panel2.Controls.Add(this.button4);
             this.splitContainer1.Size = new System.Drawing.Size(213, 535);
             this.splitContainer1.SplitterDistance = 90;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // listView2
-            // 
-            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15});
-            this.listView2.Location = new System.Drawing.Point(0, 0);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(213, 90);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.List;
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(213, 441);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Tile;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -210,9 +180,9 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idcodigocolaboradorDataGridViewTextBoxColumn,
             this.nombrescolaboradorDataGridViewTextBoxColumn,
             this.apellidoscolaboradorDataGridViewTextBoxColumn,
+            this.idcodigocolaboradorDataGridViewTextBoxColumn,
             this.correocolaboradorDataGridViewTextBoxColumn,
             this.movilcolaboradorDataGridViewTextBoxColumn,
             this.nombreestadoDataGridViewTextBoxColumn,
@@ -223,9 +193,89 @@
             this.dataGridView1.Location = new System.Drawing.Point(227, 78);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(962, 490);
+            this.dataGridView1.Size = new System.Drawing.Size(962, 496);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Acciones
+            // 
+            this.Acciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Acciones.HeaderText = "";
+            this.Acciones.Name = "Acciones";
+            this.Acciones.ReadOnly = true;
+            this.Acciones.Text = "Asignar Proyecto";
+            this.Acciones.UseColumnTextForButtonValue = true;
+            // 
+            // Acciones2
+            // 
+            this.Acciones2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Acciones2.HeaderText = "";
+            this.Acciones2.Name = "Acciones2";
+            this.Acciones2.ReadOnly = true;
+            this.Acciones2.Text = "Ver Info Colaborador";
+            this.Acciones2.UseColumnTextForButtonValue = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
+            this.listView2.Location = new System.Drawing.Point(0, 0);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(213, 90);
+            this.listView2.TabIndex = 0;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(3, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(207, 28);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Colaboradores";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(3, 37);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(207, 28);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Proyectos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(3, 71);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(207, 28);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "(Control de campos?)";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // nombrescolaboradorDataGridViewTextBoxColumn
+            // 
+            this.nombrescolaboradorDataGridViewTextBoxColumn.DataPropertyName = "nombrescolaborador";
+            this.nombrescolaboradorDataGridViewTextBoxColumn.HeaderText = "nombrescolaborador";
+            this.nombrescolaboradorDataGridViewTextBoxColumn.Name = "nombrescolaboradorDataGridViewTextBoxColumn";
+            this.nombrescolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidoscolaboradorDataGridViewTextBoxColumn
+            // 
+            this.apellidoscolaboradorDataGridViewTextBoxColumn.DataPropertyName = "apellidoscolaborador";
+            this.apellidoscolaboradorDataGridViewTextBoxColumn.HeaderText = "apellidoscolaborador";
+            this.apellidoscolaboradorDataGridViewTextBoxColumn.Name = "apellidoscolaboradorDataGridViewTextBoxColumn";
+            this.apellidoscolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dataTable1BindingSource
             // 
@@ -246,40 +296,12 @@
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // idcodigocolaboradorDataGridViewTextBoxColumn
+            // nombrerolDataGridViewTextBoxColumn
             // 
-            this.idcodigocolaboradorDataGridViewTextBoxColumn.DataPropertyName = "idcodigocolaborador";
-            this.idcodigocolaboradorDataGridViewTextBoxColumn.HeaderText = "idcodigocolaborador";
-            this.idcodigocolaboradorDataGridViewTextBoxColumn.Name = "idcodigocolaboradorDataGridViewTextBoxColumn";
-            this.idcodigocolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombrescolaboradorDataGridViewTextBoxColumn
-            // 
-            this.nombrescolaboradorDataGridViewTextBoxColumn.DataPropertyName = "nombrescolaborador";
-            this.nombrescolaboradorDataGridViewTextBoxColumn.HeaderText = "nombrescolaborador";
-            this.nombrescolaboradorDataGridViewTextBoxColumn.Name = "nombrescolaboradorDataGridViewTextBoxColumn";
-            this.nombrescolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoscolaboradorDataGridViewTextBoxColumn
-            // 
-            this.apellidoscolaboradorDataGridViewTextBoxColumn.DataPropertyName = "apellidoscolaborador";
-            this.apellidoscolaboradorDataGridViewTextBoxColumn.HeaderText = "apellidoscolaborador";
-            this.apellidoscolaboradorDataGridViewTextBoxColumn.Name = "apellidoscolaboradorDataGridViewTextBoxColumn";
-            this.apellidoscolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // correocolaboradorDataGridViewTextBoxColumn
-            // 
-            this.correocolaboradorDataGridViewTextBoxColumn.DataPropertyName = "correocolaborador";
-            this.correocolaboradorDataGridViewTextBoxColumn.HeaderText = "correocolaborador";
-            this.correocolaboradorDataGridViewTextBoxColumn.Name = "correocolaboradorDataGridViewTextBoxColumn";
-            this.correocolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // movilcolaboradorDataGridViewTextBoxColumn
-            // 
-            this.movilcolaboradorDataGridViewTextBoxColumn.DataPropertyName = "movilcolaborador";
-            this.movilcolaboradorDataGridViewTextBoxColumn.HeaderText = "movilcolaborador";
-            this.movilcolaboradorDataGridViewTextBoxColumn.Name = "movilcolaboradorDataGridViewTextBoxColumn";
-            this.movilcolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombrerolDataGridViewTextBoxColumn.DataPropertyName = "nombrerol";
+            this.nombrerolDataGridViewTextBoxColumn.HeaderText = "nombrerol";
+            this.nombrerolDataGridViewTextBoxColumn.Name = "nombrerolDataGridViewTextBoxColumn";
+            this.nombrerolDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nombreestadoDataGridViewTextBoxColumn
             // 
@@ -288,30 +310,26 @@
             this.nombreestadoDataGridViewTextBoxColumn.Name = "nombreestadoDataGridViewTextBoxColumn";
             this.nombreestadoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nombrerolDataGridViewTextBoxColumn
+            // movilcolaboradorDataGridViewTextBoxColumn
             // 
-            this.nombrerolDataGridViewTextBoxColumn.DataPropertyName = "nombrerol";
-            this.nombrerolDataGridViewTextBoxColumn.HeaderText = "nombrerol";
-            this.nombrerolDataGridViewTextBoxColumn.Name = "nombrerolDataGridViewTextBoxColumn";
-            this.nombrerolDataGridViewTextBoxColumn.ReadOnly = true;
+            this.movilcolaboradorDataGridViewTextBoxColumn.DataPropertyName = "movilcolaborador";
+            this.movilcolaboradorDataGridViewTextBoxColumn.HeaderText = "movilcolaborador";
+            this.movilcolaboradorDataGridViewTextBoxColumn.Name = "movilcolaboradorDataGridViewTextBoxColumn";
+            this.movilcolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Acciones
+            // correocolaboradorDataGridViewTextBoxColumn
             // 
-            this.Acciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Acciones.HeaderText = "";
-            this.Acciones.Name = "Acciones";
-            this.Acciones.ReadOnly = true;
-            this.Acciones.Text = "Asignar Proyecto";
-            this.Acciones.UseColumnTextForButtonValue = true;
+            this.correocolaboradorDataGridViewTextBoxColumn.DataPropertyName = "correocolaborador";
+            this.correocolaboradorDataGridViewTextBoxColumn.HeaderText = "correocolaborador";
+            this.correocolaboradorDataGridViewTextBoxColumn.Name = "correocolaboradorDataGridViewTextBoxColumn";
+            this.correocolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Acciones2
+            // idcodigocolaboradorDataGridViewTextBoxColumn
             // 
-            this.Acciones2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Acciones2.HeaderText = "";
-            this.Acciones2.Name = "Acciones2";
-            this.Acciones2.ReadOnly = true;
-            this.Acciones2.Text = "Ver Info Colaborador";
-            this.Acciones2.UseColumnTextForButtonValue = true;
+            this.idcodigocolaboradorDataGridViewTextBoxColumn.DataPropertyName = "idcodigocolaborador";
+            this.idcodigocolaboradorDataGridViewTextBoxColumn.HeaderText = "idcodigocolaborador";
+            this.idcodigocolaboradorDataGridViewTextBoxColumn.Name = "idcodigocolaboradorDataGridViewTextBoxColumn";
+            this.idcodigocolaboradorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // InicioBase
             // 
@@ -349,8 +367,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -371,14 +387,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombretipodocumentoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idcodigocolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrescolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoscolaboradorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Acciones;
+        private System.Windows.Forms.DataGridViewButtonColumn Acciones2;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcodigocolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correocolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn movilcolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreestadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrerolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Acciones;
-        private System.Windows.Forms.DataGridViewButtonColumn Acciones2;
     }
 }

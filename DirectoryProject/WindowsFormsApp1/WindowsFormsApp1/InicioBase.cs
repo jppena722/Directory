@@ -22,9 +22,6 @@ namespace WindowsFormsApp1
         {
             // TODO: esta línea de código carga datos en la tabla 'directoryDBDataSet.DataTable1' Puede moverla o quitarla según sea necesario.
             this.dataTable1TableAdapter.Fill_Consulta_inicio_colaborador(this.directoryDBDataSet.DataTable1);
-
-
-
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,6 +84,21 @@ namespace WindowsFormsApp1
             IdentificadorBase identificador = new IdentificadorBase();
             identificador.Show();
             this.Hide();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           // this.dataTable2TableAdapter.Fill_Consulta_inicio_proyecto(this.directoryDBDataSet.DataTable2);
         }
     }
 }

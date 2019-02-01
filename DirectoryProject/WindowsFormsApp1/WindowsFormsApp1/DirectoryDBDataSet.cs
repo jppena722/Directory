@@ -6,6 +6,9 @@ namespace WindowsFormsApp1
 
     partial class DirectoryDBDataSet
     {
+        partial class DataTable2DataTable
+        {
+        }
     }
 }
 

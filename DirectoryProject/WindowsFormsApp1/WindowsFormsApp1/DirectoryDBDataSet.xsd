@@ -480,6 +480,31 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DirectoryDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill_Consulta_inicio_proyecto" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData_Consulta_inicio_proyecto" GeneratorSourceName="Fill_Consulta_inicio_proyecto" GetMethodModifier="Public" GetMethodName="GetData_Consulta_inicio_proyecto" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData_Consulta_inicio_proyecto" UserSourceName="Fill_Consulta_inicio_proyecto">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT idproyecto, nombreproyecto,lineanegocios.nombrelineanegocio,direcciones.nombredireccion,colaboradores.nombrescolaborador,colaboradores.apellidoscolaborador
+  FROM proyectos
+  inner join lineanegocios on lineanegocios.idlineanegocio = proyectos.idlineanegocioproyecto
+  inner join direcciones on direcciones.iddireccion = proyectos.iddireccionproyecto
+  inner join colaboradores on idcodigocolaborador = proyectos.idgerenteproyecto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idproyecto" DataSetColumn="idproyecto" />
+              <Mapping SourceColumn="nombreproyecto" DataSetColumn="nombreproyecto" />
+              <Mapping SourceColumn="nombrelineanegocio" DataSetColumn="nombrelineanegocio" />
+              <Mapping SourceColumn="nombredireccion" DataSetColumn="nombredireccion" />
+              <Mapping SourceColumn="nombrescolaborador" DataSetColumn="nombrescolaborador" />
+              <Mapping SourceColumn="apellidoscolaborador" DataSetColumn="apellidoscolaborador" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -488,7 +513,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
   <xs:element name="DirectoryDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DirectoryDBDataSet" msprop:Generator_UserDSName="DirectoryDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="colaboradores" msprop:Generator_TableClassName="colaboradoresDataTable" msprop:Generator_TableVarName="tablecolaboradores" msprop:Generator_RowChangedName="colaboradoresRowChanged" msprop:Generator_TablePropName="colaboradores" msprop:Generator_RowDeletingName="colaboradoresRowDeleting" msprop:Generator_RowChangingName="colaboradoresRowChanging" msprop:Generator_RowEvHandlerName="colaboradoresRowChangeEventHandler" msprop:Generator_RowDeletedName="colaboradoresRowDeleted" msprop:Generator_RowClassName="colaboradoresRow" msprop:Generator_UserTableName="colaboradores" msprop:Generator_RowEvArgName="colaboradoresRowChangeEvent">
+        <xs:element name="colaboradores" msprop:Generator_TableClassName="colaboradoresDataTable" msprop:Generator_TableVarName="tablecolaboradores" msprop:Generator_TablePropName="colaboradores" msprop:Generator_RowDeletingName="colaboradoresRowDeleting" msprop:Generator_RowChangingName="colaboradoresRowChanging" msprop:Generator_RowEvHandlerName="colaboradoresRowChangeEventHandler" msprop:Generator_RowDeletedName="colaboradoresRowDeleted" msprop:Generator_UserTableName="colaboradores" msprop:Generator_RowChangedName="colaboradoresRowChanged" msprop:Generator_RowEvArgName="colaboradoresRowChangeEvent" msprop:Generator_RowClassName="colaboradoresRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idcodigocolaborador" msprop:Generator_ColumnVarNameInTable="columnidcodigocolaborador" msprop:Generator_ColumnPropNameInRow="idcodigocolaborador" msprop:Generator_ColumnPropNameInTable="idcodigocolaboradorColumn" msprop:Generator_UserColumnName="idcodigocolaborador" type="xs:int" />
@@ -551,7 +576,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="direcciones" msprop:Generator_TableClassName="direccionesDataTable" msprop:Generator_TableVarName="tabledirecciones" msprop:Generator_RowChangedName="direccionesRowChanged" msprop:Generator_TablePropName="direcciones" msprop:Generator_RowDeletingName="direccionesRowDeleting" msprop:Generator_RowChangingName="direccionesRowChanging" msprop:Generator_RowEvHandlerName="direccionesRowChangeEventHandler" msprop:Generator_RowDeletedName="direccionesRowDeleted" msprop:Generator_RowClassName="direccionesRow" msprop:Generator_UserTableName="direcciones" msprop:Generator_RowEvArgName="direccionesRowChangeEvent">
+        <xs:element name="direcciones" msprop:Generator_TableClassName="direccionesDataTable" msprop:Generator_TableVarName="tabledirecciones" msprop:Generator_TablePropName="direcciones" msprop:Generator_RowDeletingName="direccionesRowDeleting" msprop:Generator_RowChangingName="direccionesRowChanging" msprop:Generator_RowEvHandlerName="direccionesRowChangeEventHandler" msprop:Generator_RowDeletedName="direccionesRowDeleted" msprop:Generator_UserTableName="direcciones" msprop:Generator_RowChangedName="direccionesRowChanged" msprop:Generator_RowEvArgName="direccionesRowChangeEvent" msprop:Generator_RowClassName="direccionesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="iddireccion" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columniddireccion" msprop:Generator_ColumnPropNameInRow="iddireccion" msprop:Generator_ColumnPropNameInTable="iddireccionColumn" msprop:Generator_UserColumnName="iddireccion" type="xs:int" />
@@ -565,7 +590,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="estados" msprop:Generator_TableClassName="estadosDataTable" msprop:Generator_TableVarName="tableestados" msprop:Generator_RowChangedName="estadosRowChanged" msprop:Generator_TablePropName="estados" msprop:Generator_RowDeletingName="estadosRowDeleting" msprop:Generator_RowChangingName="estadosRowChanging" msprop:Generator_RowEvHandlerName="estadosRowChangeEventHandler" msprop:Generator_RowDeletedName="estadosRowDeleted" msprop:Generator_RowClassName="estadosRow" msprop:Generator_UserTableName="estados" msprop:Generator_RowEvArgName="estadosRowChangeEvent">
+        <xs:element name="estados" msprop:Generator_TableClassName="estadosDataTable" msprop:Generator_TableVarName="tableestados" msprop:Generator_TablePropName="estados" msprop:Generator_RowDeletingName="estadosRowDeleting" msprop:Generator_RowChangingName="estadosRowChanging" msprop:Generator_RowEvHandlerName="estadosRowChangeEventHandler" msprop:Generator_RowDeletedName="estadosRowDeleted" msprop:Generator_UserTableName="estados" msprop:Generator_RowChangedName="estadosRowChanged" msprop:Generator_RowEvArgName="estadosRowChangeEvent" msprop:Generator_RowClassName="estadosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idestado" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidestado" msprop:Generator_ColumnPropNameInRow="idestado" msprop:Generator_ColumnPropNameInTable="idestadoColumn" msprop:Generator_UserColumnName="idestado" type="xs:int" />
@@ -579,7 +604,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="lineanegocios" msprop:Generator_TableClassName="lineanegociosDataTable" msprop:Generator_TableVarName="tablelineanegocios" msprop:Generator_RowChangedName="lineanegociosRowChanged" msprop:Generator_TablePropName="lineanegocios" msprop:Generator_RowDeletingName="lineanegociosRowDeleting" msprop:Generator_RowChangingName="lineanegociosRowChanging" msprop:Generator_RowEvHandlerName="lineanegociosRowChangeEventHandler" msprop:Generator_RowDeletedName="lineanegociosRowDeleted" msprop:Generator_RowClassName="lineanegociosRow" msprop:Generator_UserTableName="lineanegocios" msprop:Generator_RowEvArgName="lineanegociosRowChangeEvent">
+        <xs:element name="lineanegocios" msprop:Generator_TableClassName="lineanegociosDataTable" msprop:Generator_TableVarName="tablelineanegocios" msprop:Generator_TablePropName="lineanegocios" msprop:Generator_RowDeletingName="lineanegociosRowDeleting" msprop:Generator_RowChangingName="lineanegociosRowChanging" msprop:Generator_RowEvHandlerName="lineanegociosRowChangeEventHandler" msprop:Generator_RowDeletedName="lineanegociosRowDeleted" msprop:Generator_UserTableName="lineanegocios" msprop:Generator_RowChangedName="lineanegociosRowChanged" msprop:Generator_RowEvArgName="lineanegociosRowChangeEvent" msprop:Generator_RowClassName="lineanegociosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idlineanegocio" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidlineanegocio" msprop:Generator_ColumnPropNameInRow="idlineanegocio" msprop:Generator_ColumnPropNameInTable="idlineanegocioColumn" msprop:Generator_UserColumnName="idlineanegocio" type="xs:int" />
@@ -593,7 +618,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="proyectos" msprop:Generator_TableClassName="proyectosDataTable" msprop:Generator_TableVarName="tableproyectos" msprop:Generator_RowChangedName="proyectosRowChanged" msprop:Generator_TablePropName="proyectos" msprop:Generator_RowDeletingName="proyectosRowDeleting" msprop:Generator_RowChangingName="proyectosRowChanging" msprop:Generator_RowEvHandlerName="proyectosRowChangeEventHandler" msprop:Generator_RowDeletedName="proyectosRowDeleted" msprop:Generator_RowClassName="proyectosRow" msprop:Generator_UserTableName="proyectos" msprop:Generator_RowEvArgName="proyectosRowChangeEvent">
+        <xs:element name="proyectos" msprop:Generator_TableClassName="proyectosDataTable" msprop:Generator_TableVarName="tableproyectos" msprop:Generator_TablePropName="proyectos" msprop:Generator_RowDeletingName="proyectosRowDeleting" msprop:Generator_RowChangingName="proyectosRowChanging" msprop:Generator_RowEvHandlerName="proyectosRowChangeEventHandler" msprop:Generator_RowDeletedName="proyectosRowDeleted" msprop:Generator_UserTableName="proyectos" msprop:Generator_RowChangedName="proyectosRowChanged" msprop:Generator_RowEvArgName="proyectosRowChangeEvent" msprop:Generator_RowClassName="proyectosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idproyecto" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidproyecto" msprop:Generator_ColumnPropNameInRow="idproyecto" msprop:Generator_ColumnPropNameInTable="idproyectoColumn" msprop:Generator_UserColumnName="idproyecto" type="xs:int" />
@@ -610,7 +635,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="proyectos_colaboradores" msprop:Generator_TableClassName="proyectos_colaboradoresDataTable" msprop:Generator_TableVarName="tableproyectos_colaboradores" msprop:Generator_RowChangedName="proyectos_colaboradoresRowChanged" msprop:Generator_TablePropName="proyectos_colaboradores" msprop:Generator_RowDeletingName="proyectos_colaboradoresRowDeleting" msprop:Generator_RowChangingName="proyectos_colaboradoresRowChanging" msprop:Generator_RowEvHandlerName="proyectos_colaboradoresRowChangeEventHandler" msprop:Generator_RowDeletedName="proyectos_colaboradoresRowDeleted" msprop:Generator_RowClassName="proyectos_colaboradoresRow" msprop:Generator_UserTableName="proyectos_colaboradores" msprop:Generator_RowEvArgName="proyectos_colaboradoresRowChangeEvent">
+        <xs:element name="proyectos_colaboradores" msprop:Generator_TableClassName="proyectos_colaboradoresDataTable" msprop:Generator_TableVarName="tableproyectos_colaboradores" msprop:Generator_TablePropName="proyectos_colaboradores" msprop:Generator_RowDeletingName="proyectos_colaboradoresRowDeleting" msprop:Generator_RowChangingName="proyectos_colaboradoresRowChanging" msprop:Generator_RowEvHandlerName="proyectos_colaboradoresRowChangeEventHandler" msprop:Generator_RowDeletedName="proyectos_colaboradoresRowDeleted" msprop:Generator_UserTableName="proyectos_colaboradores" msprop:Generator_RowChangedName="proyectos_colaboradoresRowChanged" msprop:Generator_RowEvArgName="proyectos_colaboradoresRowChangeEvent" msprop:Generator_RowClassName="proyectos_colaboradoresRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idproyecto" msprop:Generator_ColumnVarNameInTable="columnidproyecto" msprop:Generator_ColumnPropNameInRow="idproyecto" msprop:Generator_ColumnPropNameInTable="idproyectoColumn" msprop:Generator_UserColumnName="idproyecto" type="xs:int" />
@@ -618,7 +643,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="roles" msprop:Generator_TableClassName="rolesDataTable" msprop:Generator_TableVarName="tableroles" msprop:Generator_RowChangedName="rolesRowChanged" msprop:Generator_TablePropName="roles" msprop:Generator_RowDeletingName="rolesRowDeleting" msprop:Generator_RowChangingName="rolesRowChanging" msprop:Generator_RowEvHandlerName="rolesRowChangeEventHandler" msprop:Generator_RowDeletedName="rolesRowDeleted" msprop:Generator_RowClassName="rolesRow" msprop:Generator_UserTableName="roles" msprop:Generator_RowEvArgName="rolesRowChangeEvent">
+        <xs:element name="roles" msprop:Generator_TableClassName="rolesDataTable" msprop:Generator_TableVarName="tableroles" msprop:Generator_TablePropName="roles" msprop:Generator_RowDeletingName="rolesRowDeleting" msprop:Generator_RowChangingName="rolesRowChanging" msprop:Generator_RowEvHandlerName="rolesRowChangeEventHandler" msprop:Generator_RowDeletedName="rolesRowDeleted" msprop:Generator_UserTableName="roles" msprop:Generator_RowChangedName="rolesRowChanged" msprop:Generator_RowEvArgName="rolesRowChangeEvent" msprop:Generator_RowClassName="rolesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idrol" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidrol" msprop:Generator_ColumnPropNameInRow="idrol" msprop:Generator_ColumnPropNameInTable="idrolColumn" msprop:Generator_UserColumnName="idrol" type="xs:int" />
@@ -632,7 +657,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tipodocumentos" msprop:Generator_TableClassName="tipodocumentosDataTable" msprop:Generator_TableVarName="tabletipodocumentos" msprop:Generator_RowChangedName="tipodocumentosRowChanged" msprop:Generator_TablePropName="tipodocumentos" msprop:Generator_RowDeletingName="tipodocumentosRowDeleting" msprop:Generator_RowChangingName="tipodocumentosRowChanging" msprop:Generator_RowEvHandlerName="tipodocumentosRowChangeEventHandler" msprop:Generator_RowDeletedName="tipodocumentosRowDeleted" msprop:Generator_RowClassName="tipodocumentosRow" msprop:Generator_UserTableName="tipodocumentos" msprop:Generator_RowEvArgName="tipodocumentosRowChangeEvent">
+        <xs:element name="tipodocumentos" msprop:Generator_TableClassName="tipodocumentosDataTable" msprop:Generator_TableVarName="tabletipodocumentos" msprop:Generator_TablePropName="tipodocumentos" msprop:Generator_RowDeletingName="tipodocumentosRowDeleting" msprop:Generator_RowChangingName="tipodocumentosRowChanging" msprop:Generator_RowEvHandlerName="tipodocumentosRowChangeEventHandler" msprop:Generator_RowDeletedName="tipodocumentosRowDeleted" msprop:Generator_UserTableName="tipodocumentos" msprop:Generator_RowChangedName="tipodocumentosRowChanged" msprop:Generator_RowEvArgName="tipodocumentosRowChangeEvent" msprop:Generator_RowClassName="tipodocumentosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idtipodocumento" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidtipodocumento" msprop:Generator_ColumnPropNameInRow="idtipodocumento" msprop:Generator_ColumnPropNameInTable="idtipodocumentoColumn" msprop:Generator_UserColumnName="idtipodocumento" type="xs:int" />
@@ -646,7 +671,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idcodigocolaborador" msprop:Generator_ColumnVarNameInTable="columnidcodigocolaborador" msprop:Generator_ColumnPropNameInRow="idcodigocolaborador" msprop:Generator_ColumnPropNameInTable="idcodigocolaboradorColumn" msprop:Generator_UserColumnName="idcodigocolaborador" type="xs:int" />
@@ -689,6 +714,48 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idproyecto" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidproyecto" msprop:Generator_ColumnPropNameInRow="idproyecto" msprop:Generator_ColumnPropNameInTable="idproyectoColumn" msprop:Generator_UserColumnName="idproyecto" type="xs:int" />
+              <xs:element name="nombreproyecto" msprop:Generator_ColumnVarNameInTable="columnnombreproyecto" msprop:Generator_ColumnPropNameInRow="nombreproyecto" msprop:Generator_ColumnPropNameInTable="nombreproyectoColumn" msprop:Generator_UserColumnName="nombreproyecto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombrelineanegocio" msprop:Generator_ColumnVarNameInTable="columnnombrelineanegocio" msprop:Generator_ColumnPropNameInRow="nombrelineanegocio" msprop:Generator_ColumnPropNameInTable="nombrelineanegocioColumn" msprop:Generator_UserColumnName="nombrelineanegocio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombredireccion" msprop:Generator_ColumnVarNameInTable="columnnombredireccion" msprop:Generator_ColumnPropNameInRow="nombredireccion" msprop:Generator_ColumnPropNameInTable="nombredireccionColumn" msprop:Generator_UserColumnName="nombredireccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombrescolaborador" msprop:Generator_ColumnVarNameInTable="columnnombrescolaborador" msprop:Generator_ColumnPropNameInRow="nombrescolaborador" msprop:Generator_ColumnPropNameInTable="nombrescolaboradorColumn" msprop:Generator_UserColumnName="nombrescolaborador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellidoscolaborador" msprop:Generator_ColumnVarNameInTable="columnapellidoscolaborador" msprop:Generator_ColumnPropNameInRow="apellidoscolaborador" msprop:Generator_ColumnPropNameInTable="apellidoscolaboradorColumn" msprop:Generator_UserColumnName="apellidoscolaborador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -767,6 +834,10 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
     <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:DataTable1" />
       <xs:field xpath="mstns:idcodigocolaborador" />
+    </xs:unique>
+    <xs:unique name="DataTable2_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable2" />
+      <xs:field xpath="mstns:idproyecto" />
     </xs:unique>
   </xs:element>
 </xs:schema>
