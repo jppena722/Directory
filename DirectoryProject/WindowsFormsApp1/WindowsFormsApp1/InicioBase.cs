@@ -22,6 +22,9 @@ namespace WindowsFormsApp1
         {
             // TODO: esta línea de código carga datos en la tabla 'directoryDBDataSet.DataTable1' Puede moverla o quitarla según sea necesario.
             this.dataTable1TableAdapter.Fill_Consulta_inicio_colaborador(this.directoryDBDataSet.DataTable1);
+            label2.Text = ControlColaborador.CodigoColaborador.ToString();
+            label3.Text = ControlColaborador.NombresColaborador;
+            label4.Text = ControlColaborador.ApellidosColaborador;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,13 +54,54 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            IdentificadorBase identificador = new IdentificadorBase();
+            identificador.Show();
+            this.Close();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+           // this.dataTable2TableAdapter.Fill_Consulta_inicio_proyecto(this.directoryDBDataSet.DataTable2);
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            AgregarColaboradorBase agregarColaboradorBase = new AgregarColaboradorBase();
+            agregarColaboradorBase.Show();
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             string searchValue = textBox1.Text;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            metroGrid1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             try
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows )
+                foreach (DataGridViewRow row in metroGrid1.Rows)
                 {
-                    int count = dataGridView1.ColumnCount;
+                    int count = metroGrid1.ColumnCount;
                     for (int i = 0; i < count; i++)
                     {
                         if (row.Cells[i].Value.ToString().Equals(searchValue))
@@ -74,31 +118,11 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
-   
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            IdentificadorBase identificador = new IdentificadorBase();
-            identificador.Show();
-            this.Hide();
-        }
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-           // this.dataTable2TableAdapter.Fill_Consulta_inicio_proyecto(this.directoryDBDataSet.DataTable2);
+            this.Close();
+            IdentificadorBase identificadorBase = new IdentificadorBase();
+            identificadorBase.Show();
         }
     }
 }

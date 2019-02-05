@@ -839,16 +839,6 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public colaboradoresRow FindByidcodigocolaboradoridestadocolaboradoridrolcolaboradoridtipodocumentocolaborador(int idcodigocolaborador, int idestadocolaborador, int idrolcolaborador, int idtipodocumentocolaborador) {
-                return ((colaboradoresRow)(this.Rows.Find(new object[] {
-                            idcodigocolaborador,
-                            idestadocolaborador,
-                            idrolcolaborador,
-                            idtipodocumentocolaborador})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 colaboradoresDataTable cln = ((colaboradoresDataTable)(base.Clone()));
                 cln.InitVars();
@@ -916,11 +906,6 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columningresoxclarocolaborador);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidcodigocolaborador}, false));
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
-                                this.columnidcodigocolaborador,
-                                this.columnidestadocolaborador,
-                                this.columnidrolcolaborador,
-                                this.columnidtipodocumentocolaborador}, true));
                 this.columnidcodigocolaborador.AllowDBNull = false;
                 this.columnidcodigocolaborador.Unique = true;
                 this.columnnombrescolaborador.AllowDBNull = false;

@@ -41,3 +41,4 @@ C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\Win
 C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Directory.csproj.CopyComplete
 C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AgregarColaboradorBase.resources

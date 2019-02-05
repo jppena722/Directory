@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MetroFramework;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -18,39 +20,39 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void Base_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TBCodigoColaborador_TextChanged(object sender, EventArgs e)
-        {
 
+        private void BTIngresar_Click_1(object sender, EventArgs e)
+        {
+            if (TxtIngreso.Text!="")
+            {
+                if (ControlColaborador.AutentificarColaborador(TxtIngreso.Text) > 0)
+                {
+                    ControlColaborador.Contenedor(TxtIngreso.Text);
+                    ControlColaborador.CodigoColaborador = int.Parse(TxtIngreso.Text);
+                    InicioBase inicioBase = new InicioBase();
+                    inicioBase.Show();
+                    this.Hide();    
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "Lo sentimos, el usuario que ingresaste no esta registrado en el directorio", "Error de Autentificación", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                MetroMessageBox.Show(this, "Por favor ingrese su codigo de colaborador", "Error de Autentificación", MessageBoxButtons.OK);
+            }
+           
         }
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-
-        }
-
-        private void TBCodigoColaborador_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BTIngresar_Click(object sender, EventArgs e)
+        private void TxtIngreso_Click(object sender, EventArgs e)
         {
 
         }
     }
-}
+    }

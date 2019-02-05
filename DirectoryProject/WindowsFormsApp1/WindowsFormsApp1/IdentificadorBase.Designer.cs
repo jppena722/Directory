@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System;
+
+namespace WindowsFormsApp1
 {
     partial class IdentificadorBase
     {
@@ -31,21 +33,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IdentificadorBase));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LBTextoBienvenida = new System.Windows.Forms.Label();
-            this.TBCodigoColaborador = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BTIngresar = new System.Windows.Forms.Button();
+            this.TxtIngreso = new MetroFramework.Controls.MetroTextBox();
+            this.BTIngresar = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
-            // 
+            //
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(516, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(526, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 189);
+            this.pictureBox1.Size = new System.Drawing.Size(199, 188);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
@@ -60,21 +63,11 @@
             this.LBTextoBienvenida.Text = "Bienvenido al Directorio de Proyectos \r\n\r\nPor favor ingrese su codigo de Colabora" +
     "dor\r\n";
             // 
-            // TBCodigoColaborador
-            // 
-            this.TBCodigoColaborador.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.TBCodigoColaborador.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBCodigoColaborador.Location = new System.Drawing.Point(58, 172);
-            this.TBCodigoColaborador.Name = "TBCodigoColaborador";
-            this.TBCodigoColaborador.Size = new System.Drawing.Size(210, 29);
-            this.TBCodigoColaborador.TabIndex = 5;
-            this.TBCodigoColaborador.TextChanged += new System.EventHandler(this.TBCodigoColaborador_TextChanged_1);
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TxtIngreso);
             this.groupBox1.Controls.Add(this.BTIngresar);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.TBCodigoColaborador);
             this.groupBox1.Controls.Add(this.LBTextoBienvenida);
             this.groupBox1.Location = new System.Drawing.Point(38, 117);
             this.groupBox1.Name = "groupBox1";
@@ -82,16 +75,59 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
+            // TxtIngreso
+            // 
+            this.TxtIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.TxtIngreso.CustomButton.Image = null;
+            this.TxtIngreso.CustomButton.Location = new System.Drawing.Point(203, 1);
+            this.TxtIngreso.CustomButton.Name = "";
+            this.TxtIngreso.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TxtIngreso.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtIngreso.CustomButton.TabIndex = 1;
+            this.TxtIngreso.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtIngreso.CustomButton.UseSelectable = true;
+            this.TxtIngreso.CustomButton.Visible = false;
+            this.TxtIngreso.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.TxtIngreso.Lines = new string[0];
+            this.TxtIngreso.Location = new System.Drawing.Point(58, 177);
+            this.TxtIngreso.MaxLength = 32767;
+            this.TxtIngreso.Name = "TxtIngreso";
+            this.TxtIngreso.PasswordChar = '\0';
+            this.TxtIngreso.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtIngreso.SelectedText = "";
+            this.TxtIngreso.SelectionLength = 0;
+            this.TxtIngreso.SelectionStart = 0;
+            this.TxtIngreso.ShortcutsEnabled = true;
+            this.TxtIngreso.Size = new System.Drawing.Size(225, 23);
+            this.TxtIngreso.TabIndex = 9;
+            this.TxtIngreso.UseSelectable = true;
+            this.TxtIngreso.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtIngreso.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIngreso.Click += new System.EventHandler(this.TxtIngreso_Click);
+            // 
             // BTIngresar
             // 
-            this.BTIngresar.Font = new System.Drawing.Font("Verdana", 12.25F);
-            this.BTIngresar.Location = new System.Drawing.Point(274, 169);
+            this.BTIngresar.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.BTIngresar.Location = new System.Drawing.Point(289, 177);
             this.BTIngresar.Name = "BTIngresar";
-            this.BTIngresar.Size = new System.Drawing.Size(106, 32);
-            this.BTIngresar.TabIndex = 6;
+            this.BTIngresar.Size = new System.Drawing.Size(96, 23);
+            this.BTIngresar.TabIndex = 8;
             this.BTIngresar.Text = "Ingresar";
-            this.BTIngresar.UseVisualStyleBackColor = true;
-            this.BTIngresar.Click += new System.EventHandler(this.BTIngresar_Click);
+            this.BTIngresar.UseSelectable = true;
+            this.BTIngresar.Click += new System.EventHandler(this.BTIngresar_Click_1);
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(0, 0);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.UseSelectable = true;
             // 
             // IdentificadorBase
             // 
@@ -101,7 +137,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "IdentificadorBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Ingresar";
+            this.Text = "Directorio de Proyectos HITSS";
             this.Load += new System.EventHandler(this.Base_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -110,12 +146,18 @@
 
         }
 
+        private void Base_Load(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LBTextoBienvenida;
-        private System.Windows.Forms.TextBox TBCodigoColaborador;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button BTIngresar;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton BTIngresar;
+        private MetroFramework.Controls.MetroTextBox TxtIngreso;
     }
 }
 
