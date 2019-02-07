@@ -482,10 +482,10 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DirectoryDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill_Consulta_inicio_proyecto" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData_Consulta_inicio_proyecto" GeneratorSourceName="Fill_Consulta_inicio_proyecto" GetMethodModifier="Public" GetMethodName="GetData_Consulta_inicio_proyecto" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData_Consulta_inicio_proyecto" UserSourceName="Fill_Consulta_inicio_proyecto">
+              <DbSource ConnectionRef="DirectoryDBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill_Consulta_inicio_proyecto" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData_Consulta_inicio_proyecto" GeneratorSourceName="Fill_Consulta_inicio_proyecto" GetMethodModifier="Public" GetMethodName="GetData_Consulta_inicio_proyecto" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData_Consulta_inicio_proyecto" UserSourceName="Fill_Consulta_inicio_proyecto">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT idproyecto, nombreproyecto,lineanegocios.nombrelineanegocio,direcciones.nombredireccion,colaboradores.nombrescolaborador,colaboradores.apellidoscolaborador
+                    <CommandText>SELECT idproyecto, nombreproyecto,lineanegocios.nombrelineanegocio,direcciones.nombredireccion,colaboradores.idcodigocolaborador,colaboradores.nombrescolaborador,colaboradores.apellidoscolaborador
   FROM proyectos
   inner join lineanegocios on lineanegocios.idlineanegocio = proyectos.idlineanegocioproyecto
   inner join direcciones on direcciones.iddireccion = proyectos.iddireccionproyecto
@@ -502,6 +502,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
               <Mapping SourceColumn="nombredireccion" DataSetColumn="nombredireccion" />
               <Mapping SourceColumn="nombrescolaborador" DataSetColumn="nombrescolaborador" />
               <Mapping SourceColumn="apellidoscolaborador" DataSetColumn="apellidoscolaborador" />
+              <Mapping SourceColumn="idcodigocolaborador" DataSetColumn="idcodigocolaborador" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -759,6 +760,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="idcodigocolaborador" msprop:Generator_ColumnVarNameInTable="columnidcodigocolaborador" msprop:Generator_ColumnPropNameInRow="idcodigocolaborador" msprop:Generator_ColumnPropNameInTable="idcodigocolaboradorColumn" msprop:Generator_UserColumnName="idcodigocolaborador" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

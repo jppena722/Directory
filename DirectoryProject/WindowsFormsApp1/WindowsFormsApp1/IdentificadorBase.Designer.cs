@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
             this.SuspendLayout();
             // 
             // pictureBox1
-            //
+            // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(526, 30);
             this.pictureBox1.Name = "pictureBox1";
@@ -102,13 +102,14 @@ namespace WindowsFormsApp1
             this.TxtIngreso.SelectedText = "";
             this.TxtIngreso.SelectionLength = 0;
             this.TxtIngreso.SelectionStart = 0;
-            this.TxtIngreso.ShortcutsEnabled = true;
+            this.TxtIngreso.ShortcutsEnabled = false;
             this.TxtIngreso.Size = new System.Drawing.Size(225, 23);
             this.TxtIngreso.TabIndex = 9;
             this.TxtIngreso.UseSelectable = true;
             this.TxtIngreso.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtIngreso.WaterMarkFont = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtIngreso.Click += new System.EventHandler(this.TxtIngreso_Click);
+            this.TxtIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtIngreso_KeyPress);
             // 
             // BTIngresar
             // 

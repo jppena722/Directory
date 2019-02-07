@@ -41,6 +41,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -100,7 +101,14 @@
     <Compile Include="AgregarColaboradorBase.Designer.cs">
       <DependentUpon>AgregarColaboradorBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarProyectoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProyectoBase.Designer.cs">
+      <DependentUpon>AgregarProyectoBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlColaborador.cs" />
+    <Compile Include="ControlProyecto.cs" />
     <Compile Include="DBConection.cs" />
     <Compile Include="DirectoryDBDataSet.cs">
       <DependentUpon>DirectoryDBDataSet.xsd</DependentUpon>
@@ -126,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AgregarColaboradorBase.resx">
       <DependentUpon>AgregarColaboradorBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProyectoBase.resx">
+      <DependentUpon>AgregarProyectoBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IdentificadorBase.resx">
       <DependentUpon>IdentificadorBase.cs</DependentUpon>

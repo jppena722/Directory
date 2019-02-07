@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.tipodocumentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.directoryDBDataSet = new WindowsFormsApp1.DirectoryDBDataSet();
             this.tipodocumentosTableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.tipodocumentosTableAdapter();
@@ -68,92 +63,54 @@
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.TBPisoColaborador = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.TBSalarioColaborador = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.TBTarifarealColaborador = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.TBTarifaxclaroColaborador = new MetroFramework.Controls.MetroTextBox();
             this.BTRegistrarColaborador = new MetroFramework.Controls.MetroButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.label4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.label3 = new MetroFramework.Controls.MetroLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TBSalarioColaborador = new System.Windows.Forms.NumericUpDown();
+            this.TBTarifarealColaborador = new System.Windows.Forms.NumericUpDown();
+            this.TBTarifaxclaroColaborador = new System.Windows.Forms.NumericUpDown();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.label2 = new MetroFramework.Controls.MetroLabel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.label3 = new MetroFramework.Controls.MetroLabel();
+            this.label4 = new MetroFramework.Controls.MetroLabel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentosBindingSource1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBSalarioColaborador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBTarifarealColaborador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBTarifaxclaroColaborador)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.metroPanel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.splitContainer2);
-            this.groupBox2.Location = new System.Drawing.Point(232, 23);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(962, 55);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 16);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.button1);
-            this.splitContainer2.Panel1.Controls.Add(this.textBox1);
-            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel1_Paint);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.button3);
-            this.splitContainer2.Size = new System.Drawing.Size(956, 36);
-            this.splitContainer2.SplitterDistance = 487;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(264, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(352, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Volver al Inicio";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tipodocumentosBindingSource
             // 
@@ -221,12 +178,13 @@
             this.TBCodigoColaborador.SelectedText = "";
             this.TBCodigoColaborador.SelectionLength = 0;
             this.TBCodigoColaborador.SelectionStart = 0;
-            this.TBCodigoColaborador.ShortcutsEnabled = true;
+            this.TBCodigoColaborador.ShortcutsEnabled = false;
             this.TBCodigoColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBCodigoColaborador.TabIndex = 38;
             this.TBCodigoColaborador.UseSelectable = true;
             this.TBCodigoColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBCodigoColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TBCodigoColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCodigoColaborador_KeyPress_1);
             // 
             // tipodocumentosBindingSource1
             // 
@@ -275,12 +233,13 @@
             this.TBNombresColaborador.SelectedText = "";
             this.TBNombresColaborador.SelectionLength = 0;
             this.TBNombresColaborador.SelectionStart = 0;
-            this.TBNombresColaborador.ShortcutsEnabled = true;
+            this.TBNombresColaborador.ShortcutsEnabled = false;
             this.TBNombresColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBNombresColaborador.TabIndex = 44;
             this.TBNombresColaborador.UseSelectable = true;
             this.TBNombresColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBNombresColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TBNombresColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBApellidosColaborador_KeyPress);
             // 
             // metroLabel4
             // 
@@ -315,12 +274,13 @@
             this.TBApellidosColaborador.SelectedText = "";
             this.TBApellidosColaborador.SelectionLength = 0;
             this.TBApellidosColaborador.SelectionStart = 0;
-            this.TBApellidosColaborador.ShortcutsEnabled = true;
+            this.TBApellidosColaborador.ShortcutsEnabled = false;
             this.TBApellidosColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBApellidosColaborador.TabIndex = 46;
             this.TBApellidosColaborador.UseSelectable = true;
             this.TBApellidosColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBApellidosColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TBApellidosColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBApellidosColaborador_KeyPress);
             // 
             // CBTipodocumentoColaborador
             // 
@@ -361,12 +321,13 @@
             this.TBDocumentoColaborador.SelectedText = "";
             this.TBDocumentoColaborador.SelectionLength = 0;
             this.TBDocumentoColaborador.SelectionStart = 0;
-            this.TBDocumentoColaborador.ShortcutsEnabled = true;
+            this.TBDocumentoColaborador.ShortcutsEnabled = false;
             this.TBDocumentoColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBDocumentoColaborador.TabIndex = 52;
             this.TBDocumentoColaborador.UseSelectable = true;
             this.TBDocumentoColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBDocumentoColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TBDocumentoColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCodigoColaborador_KeyPress_1);
             // 
             // metroLabel6
             // 
@@ -419,12 +380,13 @@
             this.TBCorreoColaborador.SelectedText = "";
             this.TBCorreoColaborador.SelectionLength = 0;
             this.TBCorreoColaborador.SelectionStart = 0;
-            this.TBCorreoColaborador.ShortcutsEnabled = true;
+            this.TBCorreoColaborador.ShortcutsEnabled = false;
             this.TBCorreoColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBCorreoColaborador.TabIndex = 55;
             this.TBCorreoColaborador.UseSelectable = true;
             this.TBCorreoColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBCorreoColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TBCorreoColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCorreoColaborador_KeyPress);
             // 
             // metroLabel9
             // 
@@ -459,12 +421,13 @@
             this.TBMovilColaborador.SelectedText = "";
             this.TBMovilColaborador.SelectionLength = 0;
             this.TBMovilColaborador.SelectionStart = 0;
-            this.TBMovilColaborador.ShortcutsEnabled = true;
+            this.TBMovilColaborador.ShortcutsEnabled = false;
             this.TBMovilColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBMovilColaborador.TabIndex = 57;
             this.TBMovilColaborador.UseSelectable = true;
             this.TBMovilColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBMovilColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TBMovilColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCodigoColaborador_KeyPress_1);
             // 
             // metroLabel10
             // 
@@ -565,7 +528,7 @@
             this.TBPuestoColaborador.SelectedText = "";
             this.TBPuestoColaborador.SelectionLength = 0;
             this.TBPuestoColaborador.SelectionStart = 0;
-            this.TBPuestoColaborador.ShortcutsEnabled = true;
+            this.TBPuestoColaborador.ShortcutsEnabled = false;
             this.TBPuestoColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBPuestoColaborador.TabIndex = 68;
             this.TBPuestoColaborador.UseSelectable = true;
@@ -605,7 +568,7 @@
             this.TBPisoColaborador.SelectedText = "";
             this.TBPisoColaborador.SelectionLength = 0;
             this.TBPisoColaborador.SelectionStart = 0;
-            this.TBPisoColaborador.ShortcutsEnabled = true;
+            this.TBPisoColaborador.ShortcutsEnabled = false;
             this.TBPisoColaborador.Size = new System.Drawing.Size(203, 23);
             this.TBPisoColaborador.TabIndex = 66;
             this.TBPisoColaborador.UseSelectable = true;
@@ -621,37 +584,6 @@
             this.metroLabel15.TabIndex = 73;
             this.metroLabel15.Text = "Tarifa Real \r\nColaborador";
             // 
-            // TBSalarioColaborador
-            // 
-            // 
-            // 
-            // 
-            this.TBSalarioColaborador.CustomButton.Image = null;
-            this.TBSalarioColaborador.CustomButton.Location = new System.Drawing.Point(181, 1);
-            this.TBSalarioColaborador.CustomButton.Name = "";
-            this.TBSalarioColaborador.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TBSalarioColaborador.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TBSalarioColaborador.CustomButton.TabIndex = 1;
-            this.TBSalarioColaborador.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TBSalarioColaborador.CustomButton.UseSelectable = true;
-            this.TBSalarioColaborador.CustomButton.Visible = false;
-            this.TBSalarioColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.TBSalarioColaborador.Lines = new string[0];
-            this.TBSalarioColaborador.Location = new System.Drawing.Point(957, 200);
-            this.TBSalarioColaborador.MaxLength = 32767;
-            this.TBSalarioColaborador.Name = "TBSalarioColaborador";
-            this.TBSalarioColaborador.PasswordChar = '\0';
-            this.TBSalarioColaborador.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TBSalarioColaborador.SelectedText = "";
-            this.TBSalarioColaborador.SelectionLength = 0;
-            this.TBSalarioColaborador.SelectionStart = 0;
-            this.TBSalarioColaborador.ShortcutsEnabled = true;
-            this.TBSalarioColaborador.Size = new System.Drawing.Size(203, 23);
-            this.TBSalarioColaborador.TabIndex = 72;
-            this.TBSalarioColaborador.UseSelectable = true;
-            this.TBSalarioColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TBSalarioColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
@@ -661,37 +593,6 @@
             this.metroLabel16.TabIndex = 71;
             this.metroLabel16.Text = "Salario del Colaborador";
             // 
-            // TBTarifarealColaborador
-            // 
-            // 
-            // 
-            // 
-            this.TBTarifarealColaborador.CustomButton.Image = null;
-            this.TBTarifarealColaborador.CustomButton.Location = new System.Drawing.Point(181, 1);
-            this.TBTarifarealColaborador.CustomButton.Name = "";
-            this.TBTarifarealColaborador.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TBTarifarealColaborador.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TBTarifarealColaborador.CustomButton.TabIndex = 1;
-            this.TBTarifarealColaborador.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TBTarifarealColaborador.CustomButton.UseSelectable = true;
-            this.TBTarifarealColaborador.CustomButton.Visible = false;
-            this.TBTarifarealColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.TBTarifarealColaborador.Lines = new string[0];
-            this.TBTarifarealColaborador.Location = new System.Drawing.Point(957, 235);
-            this.TBTarifarealColaborador.MaxLength = 32767;
-            this.TBTarifarealColaborador.Name = "TBTarifarealColaborador";
-            this.TBTarifarealColaborador.PasswordChar = '\0';
-            this.TBTarifarealColaborador.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TBTarifarealColaborador.SelectedText = "";
-            this.TBTarifarealColaborador.SelectionLength = 0;
-            this.TBTarifarealColaborador.SelectionStart = 0;
-            this.TBTarifarealColaborador.ShortcutsEnabled = true;
-            this.TBTarifarealColaborador.Size = new System.Drawing.Size(203, 23);
-            this.TBTarifarealColaborador.TabIndex = 70;
-            this.TBTarifarealColaborador.UseSelectable = true;
-            this.TBTarifarealColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TBTarifarealColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
@@ -700,37 +601,6 @@
             this.metroLabel17.Size = new System.Drawing.Size(92, 38);
             this.metroLabel17.TabIndex = 75;
             this.metroLabel17.Text = "Tarifa X Claro \r\nColaborador";
-            // 
-            // TBTarifaxclaroColaborador
-            // 
-            // 
-            // 
-            // 
-            this.TBTarifaxclaroColaborador.CustomButton.Image = null;
-            this.TBTarifaxclaroColaborador.CustomButton.Location = new System.Drawing.Point(181, 1);
-            this.TBTarifaxclaroColaborador.CustomButton.Name = "";
-            this.TBTarifaxclaroColaborador.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.TBTarifaxclaroColaborador.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TBTarifaxclaroColaborador.CustomButton.TabIndex = 1;
-            this.TBTarifaxclaroColaborador.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TBTarifaxclaroColaborador.CustomButton.UseSelectable = true;
-            this.TBTarifaxclaroColaborador.CustomButton.Visible = false;
-            this.TBTarifaxclaroColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.TBTarifaxclaroColaborador.Lines = new string[0];
-            this.TBTarifaxclaroColaborador.Location = new System.Drawing.Point(957, 273);
-            this.TBTarifaxclaroColaborador.MaxLength = 32767;
-            this.TBTarifaxclaroColaborador.Name = "TBTarifaxclaroColaborador";
-            this.TBTarifaxclaroColaborador.PasswordChar = '\0';
-            this.TBTarifaxclaroColaborador.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TBTarifaxclaroColaborador.SelectedText = "";
-            this.TBTarifaxclaroColaborador.SelectionLength = 0;
-            this.TBTarifaxclaroColaborador.SelectionStart = 0;
-            this.TBTarifaxclaroColaborador.ShortcutsEnabled = true;
-            this.TBTarifaxclaroColaborador.Size = new System.Drawing.Size(203, 23);
-            this.TBTarifaxclaroColaborador.TabIndex = 74;
-            this.TBTarifaxclaroColaborador.UseSelectable = true;
-            this.TBTarifaxclaroColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TBTarifaxclaroColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // BTRegistrarColaborador
             // 
@@ -743,108 +613,208 @@
             this.BTRegistrarColaborador.UseSelectable = true;
             this.BTRegistrarColaborador.Click += new System.EventHandler(this.BTRegistrarColaborador_Click);
             // 
-            // groupBox1
+            // errorProvider1
             // 
-            this.groupBox1.Controls.Add(this.splitContainer1);
-            this.groupBox1.Location = new System.Drawing.Point(5, 23);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 554);
-            this.groupBox1.TabIndex = 43;
-            this.groupBox1.TabStop = false;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // metroButton2
+            // errorProvider2
             // 
-            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton2.Location = new System.Drawing.Point(0, 10);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(213, 23);
-            this.metroButton2.TabIndex = 0;
-            this.metroButton2.Text = "Proyectos ";
-            this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroButton2.UseSelectable = true;
+            this.errorProvider2.ContainerControl = this;
             // 
-            // metroButton3
+            // errorProvider3
             // 
-            this.metroButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton3.Location = new System.Drawing.Point(0, 36);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(213, 23);
-            this.metroButton3.TabIndex = 1;
-            this.metroButton3.Text = "Colaboradores";
-            this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroButton3.UseSelectable = true;
+            this.errorProvider3.ContainerControl = this;
             // 
-            // label4
+            // errorProvider4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "LBLApellidos";
+            this.errorProvider4.ContainerControl = this;
             // 
-            // metroLabel2
+            // errorProvider5
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 10);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(148, 38);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Bienvenido al directorio\r\nde proyectos";
+            this.errorProvider5.ContainerControl = this;
             // 
-            // label3
+            // errorProvider6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "LBLNombres";
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // errorProvider9
+            // 
+            this.errorProvider9.ContainerControl = this;
+            // 
+            // TBSalarioColaborador
+            // 
+            this.TBSalarioColaborador.Location = new System.Drawing.Point(957, 209);
+            this.TBSalarioColaborador.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.TBSalarioColaborador.Name = "TBSalarioColaborador";
+            this.TBSalarioColaborador.Size = new System.Drawing.Size(203, 20);
+            this.TBSalarioColaborador.TabIndex = 77;
+            this.TBSalarioColaborador.ThousandsSeparator = true;
+            // 
+            // TBTarifarealColaborador
+            // 
+            this.TBTarifarealColaborador.Location = new System.Drawing.Point(957, 249);
+            this.TBTarifarealColaborador.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.TBTarifarealColaborador.Name = "TBTarifarealColaborador";
+            this.TBTarifarealColaborador.Size = new System.Drawing.Size(203, 20);
+            this.TBTarifarealColaborador.TabIndex = 78;
+            this.TBTarifarealColaborador.ThousandsSeparator = true;
+            // 
+            // TBTarifaxclaroColaborador
+            // 
+            this.TBTarifaxclaroColaborador.Location = new System.Drawing.Point(957, 291);
+            this.TBTarifaxclaroColaborador.Maximum = new decimal(new int[] {
+            1661992959,
+            1808227885,
+            5,
+            0});
+            this.TBTarifaxclaroColaborador.Name = "TBTarifaxclaroColaborador";
+            this.TBTarifaxclaroColaborador.Size = new System.Drawing.Size(203, 20);
+            this.TBTarifaxclaroColaborador.TabIndex = 79;
+            this.TBTarifaxclaroColaborador.ThousandsSeparator = true;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton4.Location = new System.Drawing.Point(802, 9);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(122, 23);
+            this.metroButton4.TabIndex = 6;
+            this.metroButton4.Text = "Volver al inicio";
+            this.metroButton4.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton4.UseSelectable = true;
+            this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.metroPanel2);
+            this.groupBox3.Location = new System.Drawing.Point(8, 23);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(222, 55);
+            this.groupBox3.TabIndex = 80;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.Controls.Add(this.label2);
+            this.metroPanel2.Controls.Add(this.label3);
+            this.metroPanel2.Controls.Add(this.label4);
+            this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(3, 16);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(216, 36);
+            this.metroPanel2.TabIndex = 0;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(99, 29);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "LBLCodigo";
             // 
-            // splitContainer1
+            // label3
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(3, 16);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "LBLNombres";
             // 
-            // splitContainer1.Panel1
+            // label4
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.metroLabel2);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(107, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "LBLApellidos";
             // 
-            // splitContainer1.Panel2
+            // groupBox2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.metroButton3);
-            this.splitContainer1.Panel2.Controls.Add(this.metroButton2);
-            this.splitContainer1.Panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.splitContainer1.Size = new System.Drawing.Size(213, 535);
-            this.splitContainer1.SplitterDistance = 90;
-            this.splitContainer1.TabIndex = 0;
+            this.groupBox2.Controls.Add(this.metroPanel1);
+            this.groupBox2.Location = new System.Drawing.Point(230, 23);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(962, 55);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.metroButton4);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(6, 10);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(950, 39);
+            this.metroPanel1.TabIndex = 0;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.metroPanel3);
+            this.groupBox4.Location = new System.Drawing.Point(8, 79);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1184, 498);
+            this.groupBox4.TabIndex = 81;
+            this.groupBox4.TabStop = false;
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(3, 16);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(1178, 479);
+            this.metroPanel3.TabIndex = 0;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
             // 
             // AgregarColaboradorBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 600);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.TBTarifaxclaroColaborador);
+            this.Controls.Add(this.TBTarifarealColaborador);
+            this.Controls.Add(this.TBSalarioColaborador);
             this.Controls.Add(this.BTRegistrarColaborador);
             this.Controls.Add(this.metroLabel17);
-            this.Controls.Add(this.TBTarifaxclaroColaborador);
             this.Controls.Add(this.metroLabel15);
-            this.Controls.Add(this.TBSalarioColaborador);
             this.Controls.Add(this.metroLabel16);
-            this.Controls.Add(this.TBTarifarealColaborador);
             this.Controls.Add(this.metroLabel13);
             this.Controls.Add(this.TBPuestoColaborador);
             this.Controls.Add(this.metroLabel14);
@@ -867,42 +837,41 @@
             this.Controls.Add(this.TBApellidosColaborador);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.TBNombresColaborador);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.TBCodigoColaborador);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox4);
             this.Name = "AgregarColaboradorBase";
             this.Load += new System.EventHandler(this.AgregarColaboradorBase_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipodocumentosBindingSource1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBSalarioColaborador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBTarifarealColaborador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TBTarifaxclaroColaborador)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
         private DirectoryDBDataSet directoryDBDataSet;
         private System.Windows.Forms.BindingSource tipodocumentosBindingSource;
         private DirectoryDBDataSetTableAdapters.tipodocumentosTableAdapter tipodocumentosTableAdapter;
@@ -937,19 +906,30 @@
         private MetroFramework.Controls.MetroLabel metroLabel14;
         private MetroFramework.Controls.MetroTextBox TBPisoColaborador;
         private MetroFramework.Controls.MetroLabel metroLabel15;
-        private MetroFramework.Controls.MetroTextBox TBSalarioColaborador;
         private MetroFramework.Controls.MetroLabel metroLabel16;
-        private MetroFramework.Controls.MetroTextBox TBTarifarealColaborador;
         private MetroFramework.Controls.MetroLabel metroLabel17;
-        private MetroFramework.Controls.MetroTextBox TBTarifaxclaroColaborador;
         private MetroFramework.Controls.MetroButton BTRegistrarColaborador;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider9;
+        private System.Windows.Forms.NumericUpDown TBSalarioColaborador;
+        private System.Windows.Forms.NumericUpDown TBTarifaxclaroColaborador;
+        private System.Windows.Forms.NumericUpDown TBTarifarealColaborador;
+        private MetroFramework.Controls.MetroButton metroButton4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel label2;
         private MetroFramework.Controls.MetroLabel label3;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel label4;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
     }
 }

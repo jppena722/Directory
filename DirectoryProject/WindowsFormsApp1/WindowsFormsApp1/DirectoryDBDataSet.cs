@@ -18,6 +18,10 @@ namespace WindowsFormsApp1
 
 namespace WindowsFormsApp1.DirectoryDBDataSetTableAdapters
 {
+    partial class DataTable2TableAdapter
+    {
+    }
+
     partial class DataTable1TableAdapter
     {
     }

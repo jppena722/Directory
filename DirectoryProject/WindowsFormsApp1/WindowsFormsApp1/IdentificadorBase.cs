@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    MetroMessageBox.Show(this, "Lo sentimos, el usuario que ingresaste no esta registrado en el directorio", "Error de Autentificación", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
+                    MetroMessageBox.Show(this, "Lo sentimos, el usuario que ingresaste no esta registrado en el directorio", "Error de Autentificación", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 }
             }
             else
@@ -53,6 +53,14 @@ namespace WindowsFormsApp1
         private void TxtIngreso_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtIngreso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
     }

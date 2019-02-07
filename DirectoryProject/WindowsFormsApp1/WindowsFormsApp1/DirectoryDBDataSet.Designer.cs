@@ -3427,6 +3427,8 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnapellidoscolaborador;
             
+            private global::System.Data.DataColumn columnidcodigocolaborador;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public DataTable2DataTable() {
@@ -3510,6 +3512,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn idcodigocolaboradorColumn {
+                get {
+                    return this.columnidcodigocolaborador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3545,7 +3555,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataTable2Row AddDataTable2Row(string nombreproyecto, string nombrelineanegocio, string nombredireccion, string nombrescolaborador, string apellidoscolaborador) {
+            public DataTable2Row AddDataTable2Row(string nombreproyecto, string nombrelineanegocio, string nombredireccion, string nombrescolaborador, string apellidoscolaborador, int idcodigocolaborador) {
                 DataTable2Row rowDataTable2Row = ((DataTable2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3553,7 +3563,8 @@ namespace WindowsFormsApp1 {
                         nombrelineanegocio,
                         nombredireccion,
                         nombrescolaborador,
-                        apellidoscolaborador};
+                        apellidoscolaborador,
+                        idcodigocolaborador};
                 rowDataTable2Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable2Row);
                 return rowDataTable2Row;
@@ -3589,6 +3600,7 @@ namespace WindowsFormsApp1 {
                 this.columnnombredireccion = base.Columns["nombredireccion"];
                 this.columnnombrescolaborador = base.Columns["nombrescolaborador"];
                 this.columnapellidoscolaborador = base.Columns["apellidoscolaborador"];
+                this.columnidcodigocolaborador = base.Columns["idcodigocolaborador"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3606,6 +3618,8 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnnombrescolaborador);
                 this.columnapellidoscolaborador = new global::System.Data.DataColumn("apellidoscolaborador", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnapellidoscolaborador);
+                this.columnidcodigocolaborador = new global::System.Data.DataColumn("idcodigocolaborador", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidcodigocolaborador);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidproyecto}, true));
                 this.columnidproyecto.AutoIncrement = true;
@@ -3623,6 +3637,7 @@ namespace WindowsFormsApp1 {
                 this.columnnombrescolaborador.MaxLength = 100;
                 this.columnapellidoscolaborador.AllowDBNull = false;
                 this.columnapellidoscolaborador.MaxLength = 100;
+                this.columnidcodigocolaborador.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4479,6 +4494,17 @@ namespace WindowsFormsApp1 {
                 }
                 set {
                     this[this.tableDataTable2.apellidoscolaboradorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int idcodigocolaborador {
+                get {
+                    return ((int)(this[this.tableDataTable2.idcodigocolaboradorColumn]));
+                }
+                set {
+                    this[this.tableDataTable2.idcodigocolaboradorColumn] = value;
                 }
             }
         }
@@ -8473,6 +8499,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador";
             tableMapping.ColumnMappings.Add("nombredireccion", "nombredireccion");
             tableMapping.ColumnMappings.Add("nombrescolaborador", "nombrescolaborador");
             tableMapping.ColumnMappings.Add("apellidoscolaborador", "apellidoscolaborador");
+            tableMapping.ColumnMappings.Add("idcodigocolaborador", "idcodigocolaborador");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8489,7 +8516,7 @@ INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador";
             this._commandCollection = new global::Npgsql.NpgsqlCommand[1];
             this._commandCollection[0] = new global::Npgsql.NpgsqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT idproyecto, nombreproyecto,lineanegocios.nombrelineanegocio,direcciones.nombredireccion,colaboradores.nombrescolaborador,colaboradores.apellidoscolaborador
+            this._commandCollection[0].CommandText = @"SELECT idproyecto, nombreproyecto,lineanegocios.nombrelineanegocio,direcciones.nombredireccion,colaboradores.idcodigocolaborador,colaboradores.nombrescolaborador,colaboradores.apellidoscolaborador
   FROM proyectos
   inner join lineanegocios on lineanegocios.idlineanegocio = proyectos.idlineanegocioproyecto
   inner join direcciones on direcciones.iddireccion = proyectos.iddireccionproyecto
