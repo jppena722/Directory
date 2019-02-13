@@ -110,6 +110,7 @@
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.metroPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tipodocumentosBindingSource
@@ -170,7 +171,7 @@
             this.TBCodigoColaborador.CustomButton.Visible = false;
             this.TBCodigoColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBCodigoColaborador.Lines = new string[0];
-            this.TBCodigoColaborador.Location = new System.Drawing.Point(466, 142);
+            this.TBCodigoColaborador.Location = new System.Drawing.Point(358, 56);
             this.TBCodigoColaborador.MaxLength = 32767;
             this.TBCodigoColaborador.Name = "TBCodigoColaborador";
             this.TBCodigoColaborador.PasswordChar = '\0';
@@ -194,7 +195,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(256, 146);
+            this.metroLabel1.Location = new System.Drawing.Point(148, 53);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(155, 19);
             this.metroLabel1.TabIndex = 42;
@@ -203,7 +204,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(256, 175);
+            this.metroLabel3.Location = new System.Drawing.Point(148, 82);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(166, 19);
             this.metroLabel3.TabIndex = 45;
@@ -225,7 +226,7 @@
             this.TBNombresColaborador.CustomButton.Visible = false;
             this.TBNombresColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBNombresColaborador.Lines = new string[0];
-            this.TBNombresColaborador.Location = new System.Drawing.Point(466, 171);
+            this.TBNombresColaborador.Location = new System.Drawing.Point(358, 85);
             this.TBNombresColaborador.MaxLength = 32767;
             this.TBNombresColaborador.Name = "TBNombresColaborador";
             this.TBNombresColaborador.PasswordChar = '\0';
@@ -244,7 +245,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(256, 204);
+            this.metroLabel4.Location = new System.Drawing.Point(148, 118);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(165, 19);
             this.metroLabel4.TabIndex = 47;
@@ -266,7 +267,7 @@
             this.TBApellidosColaborador.CustomButton.Visible = false;
             this.TBApellidosColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBApellidosColaborador.Lines = new string[0];
-            this.TBApellidosColaborador.Location = new System.Drawing.Point(466, 200);
+            this.TBApellidosColaborador.Location = new System.Drawing.Point(358, 114);
             this.TBApellidosColaborador.MaxLength = 32767;
             this.TBApellidosColaborador.Name = "TBApellidosColaborador";
             this.TBApellidosColaborador.PasswordChar = '\0';
@@ -290,7 +291,7 @@
             this.CBTipodocumentoColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBTipodocumentoColaborador.FormattingEnabled = true;
             this.CBTipodocumentoColaborador.ItemHeight = 23;
-            this.CBTipodocumentoColaborador.Location = new System.Drawing.Point(466, 231);
+            this.CBTipodocumentoColaborador.Location = new System.Drawing.Point(358, 145);
             this.CBTipodocumentoColaborador.Name = "CBTipodocumentoColaborador";
             this.CBTipodocumentoColaborador.Size = new System.Drawing.Size(203, 29);
             this.CBTipodocumentoColaborador.TabIndex = 51;
@@ -313,7 +314,7 @@
             this.TBDocumentoColaborador.CustomButton.Visible = false;
             this.TBDocumentoColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBDocumentoColaborador.Lines = new string[0];
-            this.TBDocumentoColaborador.Location = new System.Drawing.Point(466, 268);
+            this.TBDocumentoColaborador.Location = new System.Drawing.Point(358, 182);
             this.TBDocumentoColaborador.MaxLength = 32767;
             this.TBDocumentoColaborador.Name = "TBDocumentoColaborador";
             this.TBDocumentoColaborador.PasswordChar = '\0';
@@ -332,7 +333,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(256, 241);
+            this.metroLabel6.Location = new System.Drawing.Point(148, 155);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(208, 19);
             this.metroLabel6.TabIndex = 53;
@@ -341,7 +342,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(256, 272);
+            this.metroLabel7.Location = new System.Drawing.Point(148, 186);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(179, 19);
             this.metroLabel7.TabIndex = 54;
@@ -350,7 +351,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(256, 301);
+            this.metroLabel8.Location = new System.Drawing.Point(148, 215);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(153, 19);
             this.metroLabel8.TabIndex = 56;
@@ -372,7 +373,7 @@
             this.TBCorreoColaborador.CustomButton.Visible = false;
             this.TBCorreoColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBCorreoColaborador.Lines = new string[0];
-            this.TBCorreoColaborador.Location = new System.Drawing.Point(466, 297);
+            this.TBCorreoColaborador.Location = new System.Drawing.Point(358, 211);
             this.TBCorreoColaborador.MaxLength = 32767;
             this.TBCorreoColaborador.Name = "TBCorreoColaborador";
             this.TBCorreoColaborador.PasswordChar = '\0';
@@ -391,7 +392,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(256, 330);
+            this.metroLabel9.Location = new System.Drawing.Point(148, 244);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(143, 19);
             this.metroLabel9.TabIndex = 58;
@@ -413,7 +414,7 @@
             this.TBMovilColaborador.CustomButton.Visible = false;
             this.TBMovilColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBMovilColaborador.Lines = new string[0];
-            this.TBMovilColaborador.Location = new System.Drawing.Point(466, 326);
+            this.TBMovilColaborador.Location = new System.Drawing.Point(358, 240);
             this.TBMovilColaborador.MaxLength = 32767;
             this.TBMovilColaborador.Name = "TBMovilColaborador";
             this.TBMovilColaborador.PasswordChar = '\0';
@@ -427,12 +428,12 @@
             this.TBMovilColaborador.UseSelectable = true;
             this.TBMovilColaborador.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TBMovilColaborador.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.TBMovilColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBCodigoColaborador_KeyPress_1);
+            this.TBMovilColaborador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBMovilColaborador_KeyPress);
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(256, 360);
+            this.metroLabel10.Location = new System.Drawing.Point(148, 274);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(150, 19);
             this.metroLabel10.TabIndex = 60;
@@ -446,7 +447,7 @@
             this.CBEstadoColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBEstadoColaborador.FormattingEnabled = true;
             this.CBEstadoColaborador.ItemHeight = 23;
-            this.CBEstadoColaborador.Location = new System.Drawing.Point(466, 355);
+            this.CBEstadoColaborador.Location = new System.Drawing.Point(358, 269);
             this.CBEstadoColaborador.Name = "CBEstadoColaborador";
             this.CBEstadoColaborador.Size = new System.Drawing.Size(203, 29);
             this.CBEstadoColaborador.TabIndex = 61;
@@ -461,7 +462,7 @@
             this.CBRolColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBRolColaborador.FormattingEnabled = true;
             this.CBRolColaborador.ItemHeight = 23;
-            this.CBRolColaborador.Location = new System.Drawing.Point(466, 390);
+            this.CBRolColaborador.Location = new System.Drawing.Point(358, 304);
             this.CBRolColaborador.Name = "CBRolColaborador";
             this.CBRolColaborador.Size = new System.Drawing.Size(203, 29);
             this.CBRolColaborador.TabIndex = 63;
@@ -471,7 +472,7 @@
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(256, 395);
+            this.metroLabel11.Location = new System.Drawing.Point(148, 309);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(130, 19);
             this.metroLabel11.TabIndex = 62;
@@ -480,7 +481,7 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(256, 426);
+            this.metroLabel12.Location = new System.Drawing.Point(148, 340);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(109, 38);
             this.metroLabel12.TabIndex = 64;
@@ -488,7 +489,7 @@
             // 
             // DTFechaingresoColaborador
             // 
-            this.DTFechaingresoColaborador.Location = new System.Drawing.Point(466, 426);
+            this.DTFechaingresoColaborador.Location = new System.Drawing.Point(358, 340);
             this.DTFechaingresoColaborador.MinimumSize = new System.Drawing.Size(0, 29);
             this.DTFechaingresoColaborador.Name = "DTFechaingresoColaborador";
             this.DTFechaingresoColaborador.Size = new System.Drawing.Size(203, 29);
@@ -498,7 +499,7 @@
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(747, 173);
+            this.metroLabel13.Location = new System.Drawing.Point(639, 87);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(150, 19);
             this.metroLabel13.TabIndex = 69;
@@ -520,7 +521,7 @@
             this.TBPuestoColaborador.CustomButton.Visible = false;
             this.TBPuestoColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBPuestoColaborador.Lines = new string[0];
-            this.TBPuestoColaborador.Location = new System.Drawing.Point(957, 171);
+            this.TBPuestoColaborador.Location = new System.Drawing.Point(849, 85);
             this.TBPuestoColaborador.MaxLength = 32767;
             this.TBPuestoColaborador.Name = "TBPuestoColaborador";
             this.TBPuestoColaborador.PasswordChar = '\0';
@@ -538,7 +539,7 @@
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(747, 146);
+            this.metroLabel14.Location = new System.Drawing.Point(639, 60);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(135, 19);
             this.metroLabel14.TabIndex = 67;
@@ -560,7 +561,7 @@
             this.TBPisoColaborador.CustomButton.Visible = false;
             this.TBPisoColaborador.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.TBPisoColaborador.Lines = new string[0];
-            this.TBPisoColaborador.Location = new System.Drawing.Point(957, 142);
+            this.TBPisoColaborador.Location = new System.Drawing.Point(849, 56);
             this.TBPisoColaborador.MaxLength = 32767;
             this.TBPisoColaborador.Name = "TBPisoColaborador";
             this.TBPisoColaborador.PasswordChar = '\0';
@@ -578,7 +579,7 @@
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(747, 231);
+            this.metroLabel15.Location = new System.Drawing.Point(639, 145);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(85, 38);
             this.metroLabel15.TabIndex = 73;
@@ -587,7 +588,7 @@
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(747, 204);
+            this.metroLabel16.Location = new System.Drawing.Point(639, 118);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(151, 19);
             this.metroLabel16.TabIndex = 71;
@@ -596,7 +597,7 @@
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(747, 273);
+            this.metroLabel17.Location = new System.Drawing.Point(639, 187);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(92, 38);
             this.metroLabel17.TabIndex = 75;
@@ -605,7 +606,7 @@
             // BTRegistrarColaborador
             // 
             this.BTRegistrarColaborador.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.BTRegistrarColaborador.Location = new System.Drawing.Point(747, 330);
+            this.BTRegistrarColaborador.Location = new System.Drawing.Point(540, 407);
             this.BTRegistrarColaborador.Name = "BTRegistrarColaborador";
             this.BTRegistrarColaborador.Size = new System.Drawing.Size(150, 23);
             this.BTRegistrarColaborador.TabIndex = 76;
@@ -651,7 +652,7 @@
             // 
             // TBSalarioColaborador
             // 
-            this.TBSalarioColaborador.Location = new System.Drawing.Point(957, 209);
+            this.TBSalarioColaborador.Location = new System.Drawing.Point(849, 123);
             this.TBSalarioColaborador.Maximum = new decimal(new int[] {
             1661992959,
             1808227885,
@@ -664,7 +665,7 @@
             // 
             // TBTarifarealColaborador
             // 
-            this.TBTarifarealColaborador.Location = new System.Drawing.Point(957, 249);
+            this.TBTarifarealColaborador.Location = new System.Drawing.Point(849, 163);
             this.TBTarifarealColaborador.Maximum = new decimal(new int[] {
             1661992959,
             1808227885,
@@ -677,7 +678,7 @@
             // 
             // TBTarifaxclaroColaborador
             // 
-            this.TBTarifaxclaroColaborador.Location = new System.Drawing.Point(957, 291);
+            this.TBTarifaxclaroColaborador.Location = new System.Drawing.Point(849, 205);
             this.TBTarifaxclaroColaborador.Maximum = new decimal(new int[] {
             1661992959,
             1808227885,
@@ -708,7 +709,7 @@
             this.groupBox3.Size = new System.Drawing.Size(222, 55);
             this.groupBox3.TabIndex = 80;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+//            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // metroPanel2
             // 
@@ -762,17 +763,18 @@
             this.groupBox2.Size = new System.Drawing.Size(962, 55);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+ //           this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.metroButton4);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(6, 10);
+            this.metroPanel1.Location = new System.Drawing.Point(3, 16);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(950, 39);
+            this.metroPanel1.Size = new System.Drawing.Size(956, 36);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -789,6 +791,37 @@
             // 
             // metroPanel3
             // 
+            this.metroPanel3.Controls.Add(this.TBTarifaxclaroColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel1);
+            this.metroPanel3.Controls.Add(this.TBTarifarealColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel3);
+            this.metroPanel3.Controls.Add(this.TBSalarioColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel7);
+            this.metroPanel3.Controls.Add(this.BTRegistrarColaborador);
+            this.metroPanel3.Controls.Add(this.TBCodigoColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel17);
+            this.metroPanel3.Controls.Add(this.TBNombresColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel15);
+            this.metroPanel3.Controls.Add(this.TBApellidosColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel16);
+            this.metroPanel3.Controls.Add(this.metroLabel4);
+            this.metroPanel3.Controls.Add(this.metroLabel13);
+            this.metroPanel3.Controls.Add(this.CBTipodocumentoColaborador);
+            this.metroPanel3.Controls.Add(this.TBPuestoColaborador);
+            this.metroPanel3.Controls.Add(this.TBDocumentoColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel14);
+            this.metroPanel3.Controls.Add(this.metroLabel6);
+            this.metroPanel3.Controls.Add(this.TBPisoColaborador);
+            this.metroPanel3.Controls.Add(this.TBCorreoColaborador);
+            this.metroPanel3.Controls.Add(this.DTFechaingresoColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel8);
+            this.metroPanel3.Controls.Add(this.metroLabel12);
+            this.metroPanel3.Controls.Add(this.TBMovilColaborador);
+            this.metroPanel3.Controls.Add(this.CBRolColaborador);
+            this.metroPanel3.Controls.Add(this.metroLabel9);
+            this.metroPanel3.Controls.Add(this.metroLabel11);
+            this.metroPanel3.Controls.Add(this.metroLabel10);
+            this.metroPanel3.Controls.Add(this.CBEstadoColaborador);
             this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
@@ -808,37 +841,6 @@
             this.ClientSize = new System.Drawing.Size(1200, 600);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.TBTarifaxclaroColaborador);
-            this.Controls.Add(this.TBTarifarealColaborador);
-            this.Controls.Add(this.TBSalarioColaborador);
-            this.Controls.Add(this.BTRegistrarColaborador);
-            this.Controls.Add(this.metroLabel17);
-            this.Controls.Add(this.metroLabel15);
-            this.Controls.Add(this.metroLabel16);
-            this.Controls.Add(this.metroLabel13);
-            this.Controls.Add(this.TBPuestoColaborador);
-            this.Controls.Add(this.metroLabel14);
-            this.Controls.Add(this.TBPisoColaborador);
-            this.Controls.Add(this.DTFechaingresoColaborador);
-            this.Controls.Add(this.metroLabel12);
-            this.Controls.Add(this.CBRolColaborador);
-            this.Controls.Add(this.metroLabel11);
-            this.Controls.Add(this.CBEstadoColaborador);
-            this.Controls.Add(this.metroLabel10);
-            this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.TBMovilColaborador);
-            this.Controls.Add(this.metroLabel8);
-            this.Controls.Add(this.TBCorreoColaborador);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.TBDocumentoColaborador);
-            this.Controls.Add(this.CBTipodocumentoColaborador);
-            this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.TBApellidosColaborador);
-            this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.TBNombresColaborador);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.TBCodigoColaborador);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox4);
             this.Name = "AgregarColaboradorBase";
@@ -866,6 +868,8 @@
             this.groupBox2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.metroPanel3.ResumeLayout(false);
+            this.metroPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

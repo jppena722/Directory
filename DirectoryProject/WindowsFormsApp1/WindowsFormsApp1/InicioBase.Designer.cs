@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioBase));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +44,7 @@
             this.label4 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.textBox1 = new MetroFramework.Controls.MetroTextBox();
             this.button3 = new MetroFramework.Controls.MetroButton();
@@ -53,18 +55,6 @@
             this.directoryDBDataSet1 = new WindowsFormsApp1.DirectoryDBDataSet();
             this.dataTable1TableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.DataTable1TableAdapter();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.directoryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable2TableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.DataTable2TableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.TableAdapterManager();
-            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
-            this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.idcodigocolaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrescolaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoscolaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +64,11 @@
             this.nombrerol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTNAsignarproyecto = new System.Windows.Forms.DataGridViewButtonColumn();
             this.BTNVercolaborador = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.directoryDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable2TableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.DataTable2TableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.TableAdapterManager();
+            this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.idproyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreproyecto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrelineanegocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,10 +78,18 @@
             this.idcodigocolaborador2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asignar_Colaborador = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Ver_Proyecto = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.groupBox1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet1)).BeginInit();
@@ -104,9 +107,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.metroPanel2);
-            this.groupBox1.Location = new System.Drawing.Point(5, 23);
+            this.groupBox1.Location = new System.Drawing.Point(5, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 107);
+            this.groupBox1.Size = new System.Drawing.Size(219, 105);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
@@ -122,7 +125,7 @@
             this.metroPanel2.HorizontalScrollbarSize = 10;
             this.metroPanel2.Location = new System.Drawing.Point(3, 16);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(213, 88);
+            this.metroPanel2.Size = new System.Drawing.Size(213, 86);
             this.metroPanel2.TabIndex = 0;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -167,29 +170,43 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.metroPanel1);
-            this.groupBox2.Location = new System.Drawing.Point(227, 23);
+            this.groupBox2.Location = new System.Drawing.Point(227, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(972, 55);
+            this.groupBox2.Size = new System.Drawing.Size(972, 53);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.pictureBox1);
             this.metroPanel1.Controls.Add(this.metroButton4);
             this.metroPanel1.Controls.Add(this.textBox1);
             this.metroPanel1.Controls.Add(this.button3);
             this.metroPanel1.Controls.Add(this.metroButton1);
             this.metroPanel1.Controls.Add(this.button1);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(6, 10);
+            this.metroPanel1.Location = new System.Drawing.Point(3, 16);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(950, 39);
+            this.metroPanel1.Size = new System.Drawing.Size(966, 34);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(416, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // metroButton4
             // 
@@ -233,6 +250,7 @@
             this.textBox1.UseSelectable = true;
             this.textBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
             // button3
             // 
@@ -268,6 +286,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Buscar";
             this.button1.UseSelectable = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataTable1BindingSource
             // 
@@ -348,6 +367,75 @@
             this.metroGrid1.TabIndex = 4;
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+            // 
+            // idcodigocolaborador
+            // 
+            this.idcodigocolaborador.DataPropertyName = "idcodigocolaborador";
+            this.idcodigocolaborador.HeaderText = "idcodigocolaborador";
+            this.idcodigocolaborador.Name = "idcodigocolaborador";
+            this.idcodigocolaborador.ReadOnly = true;
+            // 
+            // nombrescolaborador
+            // 
+            this.nombrescolaborador.DataPropertyName = "nombrescolaborador";
+            this.nombrescolaborador.HeaderText = "nombrescolaborador";
+            this.nombrescolaborador.Name = "nombrescolaborador";
+            this.nombrescolaborador.ReadOnly = true;
+            // 
+            // apellidoscolaborador
+            // 
+            this.apellidoscolaborador.DataPropertyName = "apellidoscolaborador";
+            this.apellidoscolaborador.HeaderText = "apellidoscolaborador";
+            this.apellidoscolaborador.Name = "apellidoscolaborador";
+            this.apellidoscolaborador.ReadOnly = true;
+            // 
+            // correocolaborador
+            // 
+            this.correocolaborador.DataPropertyName = "correocolaborador";
+            this.correocolaborador.HeaderText = "correocolaborador";
+            this.correocolaborador.Name = "correocolaborador";
+            this.correocolaborador.ReadOnly = true;
+            // 
+            // movilcolaborador
+            // 
+            this.movilcolaborador.DataPropertyName = "movilcolaborador";
+            this.movilcolaborador.HeaderText = "movilcolaborador";
+            this.movilcolaborador.Name = "movilcolaborador";
+            this.movilcolaborador.ReadOnly = true;
+            // 
+            // nombreestado
+            // 
+            this.nombreestado.DataPropertyName = "nombreestado";
+            this.nombreestado.HeaderText = "nombreestado";
+            this.nombreestado.Name = "nombreestado";
+            this.nombreestado.ReadOnly = true;
+            // 
+            // nombrerol
+            // 
+            this.nombrerol.DataPropertyName = "nombrerol";
+            this.nombrerol.HeaderText = "nombrerol";
+            this.nombrerol.Name = "nombrerol";
+            this.nombrerol.ReadOnly = true;
+            // 
+            // BTNAsignarproyecto
+            // 
+            this.BTNAsignarproyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BTNAsignarproyecto.HeaderText = "";
+            this.BTNAsignarproyecto.Name = "BTNAsignarproyecto";
+            this.BTNAsignarproyecto.ReadOnly = true;
+            this.BTNAsignarproyecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BTNAsignarproyecto.Text = "Asignar Proyecto";
+            this.BTNAsignarproyecto.UseColumnTextForButtonValue = true;
+            // 
+            // BTNVercolaborador
+            // 
+            this.BTNVercolaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BTNVercolaborador.HeaderText = "";
+            this.BTNVercolaborador.Name = "BTNVercolaborador";
+            this.BTNVercolaborador.ReadOnly = true;
+            this.BTNVercolaborador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BTNVercolaborador.Text = "Ver Colaborador";
+            this.BTNVercolaborador.UseColumnTextForButtonValue = true;
             // 
             // dataTable1BindingSource1
             // 
@@ -437,6 +525,76 @@
             this.metroGrid2.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroGrid2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid2_CellContentClick);
             // 
+            // idproyecto
+            // 
+            this.idproyecto.DataPropertyName = "idproyecto";
+            this.idproyecto.HeaderText = "idproyecto";
+            this.idproyecto.Name = "idproyecto";
+            this.idproyecto.ReadOnly = true;
+            this.idproyecto.Width = 80;
+            // 
+            // nombreproyecto
+            // 
+            this.nombreproyecto.DataPropertyName = "nombreproyecto";
+            this.nombreproyecto.HeaderText = "nombreproyecto";
+            this.nombreproyecto.Name = "nombreproyecto";
+            this.nombreproyecto.ReadOnly = true;
+            // 
+            // nombrelineanegocio
+            // 
+            this.nombrelineanegocio.DataPropertyName = "nombrelineanegocio";
+            this.nombrelineanegocio.HeaderText = "nombrelineanegocio";
+            this.nombrelineanegocio.Name = "nombrelineanegocio";
+            this.nombrelineanegocio.ReadOnly = true;
+            // 
+            // nombredireccion
+            // 
+            this.nombredireccion.DataPropertyName = "nombredireccion";
+            this.nombredireccion.HeaderText = "nombredireccion";
+            this.nombredireccion.Name = "nombredireccion";
+            this.nombredireccion.ReadOnly = true;
+            // 
+            // nombrescolaborador2
+            // 
+            this.nombrescolaborador2.DataPropertyName = "nombrescolaborador";
+            this.nombrescolaborador2.HeaderText = "nombrescolaborador";
+            this.nombrescolaborador2.Name = "nombrescolaborador2";
+            this.nombrescolaborador2.ReadOnly = true;
+            // 
+            // apellidoscolaborador2
+            // 
+            this.apellidoscolaborador2.DataPropertyName = "apellidoscolaborador";
+            this.apellidoscolaborador2.HeaderText = "apellidoscolaborador";
+            this.apellidoscolaborador2.Name = "apellidoscolaborador2";
+            this.apellidoscolaborador2.ReadOnly = true;
+            // 
+            // idcodigocolaborador2
+            // 
+            this.idcodigocolaborador2.DataPropertyName = "idcodigocolaborador";
+            this.idcodigocolaborador2.HeaderText = "idcodigocolaborador";
+            this.idcodigocolaborador2.Name = "idcodigocolaborador2";
+            this.idcodigocolaborador2.ReadOnly = true;
+            // 
+            // Asignar_Colaborador
+            // 
+            this.Asignar_Colaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Asignar_Colaborador.HeaderText = "";
+            this.Asignar_Colaborador.Name = "Asignar_Colaborador";
+            this.Asignar_Colaborador.ReadOnly = true;
+            this.Asignar_Colaborador.Text = "Asignar Colaboradores";
+            this.Asignar_Colaborador.UseColumnTextForButtonValue = true;
+            this.Asignar_Colaborador.Width = 140;
+            // 
+            // Ver_Proyecto
+            // 
+            this.Ver_Proyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Ver_Proyecto.HeaderText = "";
+            this.Ver_Proyecto.Name = "Ver_Proyecto";
+            this.Ver_Proyecto.ReadOnly = true;
+            this.Ver_Proyecto.Text = "Ver Proyecto";
+            this.Ver_Proyecto.UseColumnTextForButtonValue = true;
+            this.Ver_Proyecto.Width = 80;
+            // 
             // dataTable2BindingSource
             // 
             this.dataTable2BindingSource.DataMember = "DataTable2";
@@ -517,145 +675,6 @@
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
-            // idcodigocolaborador
-            // 
-            this.idcodigocolaborador.DataPropertyName = "idcodigocolaborador";
-            this.idcodigocolaborador.HeaderText = "idcodigocolaborador";
-            this.idcodigocolaborador.Name = "idcodigocolaborador";
-            this.idcodigocolaborador.ReadOnly = true;
-            // 
-            // nombrescolaborador
-            // 
-            this.nombrescolaborador.DataPropertyName = "nombrescolaborador";
-            this.nombrescolaborador.HeaderText = "nombrescolaborador";
-            this.nombrescolaborador.Name = "nombrescolaborador";
-            this.nombrescolaborador.ReadOnly = true;
-            // 
-            // apellidoscolaborador
-            // 
-            this.apellidoscolaborador.DataPropertyName = "apellidoscolaborador";
-            this.apellidoscolaborador.HeaderText = "apellidoscolaborador";
-            this.apellidoscolaborador.Name = "apellidoscolaborador";
-            this.apellidoscolaborador.ReadOnly = true;
-            // 
-            // correocolaborador
-            // 
-            this.correocolaborador.DataPropertyName = "correocolaborador";
-            this.correocolaborador.HeaderText = "correocolaborador";
-            this.correocolaborador.Name = "correocolaborador";
-            this.correocolaborador.ReadOnly = true;
-            // 
-            // movilcolaborador
-            // 
-            this.movilcolaborador.DataPropertyName = "movilcolaborador";
-            this.movilcolaborador.HeaderText = "movilcolaborador";
-            this.movilcolaborador.Name = "movilcolaborador";
-            this.movilcolaborador.ReadOnly = true;
-            // 
-            // nombreestado
-            // 
-            this.nombreestado.DataPropertyName = "nombreestado";
-            this.nombreestado.HeaderText = "nombreestado";
-            this.nombreestado.Name = "nombreestado";
-            this.nombreestado.ReadOnly = true;
-            // 
-            // nombrerol
-            // 
-            this.nombrerol.DataPropertyName = "nombrerol";
-            this.nombrerol.HeaderText = "nombrerol";
-            this.nombrerol.Name = "nombrerol";
-            this.nombrerol.ReadOnly = true;
-            // 
-            // BTNAsignarproyecto
-            // 
-            this.BTNAsignarproyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BTNAsignarproyecto.HeaderText = "";
-            this.BTNAsignarproyecto.Name = "BTNAsignarproyecto";
-            this.BTNAsignarproyecto.ReadOnly = true;
-            this.BTNAsignarproyecto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BTNAsignarproyecto.Text = "Asignar Proyecto";
-            this.BTNAsignarproyecto.UseColumnTextForButtonValue = true;
-            // 
-            // BTNVercolaborador
-            // 
-            this.BTNVercolaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BTNVercolaborador.HeaderText = "";
-            this.BTNVercolaborador.Name = "BTNVercolaborador";
-            this.BTNVercolaborador.ReadOnly = true;
-            this.BTNVercolaborador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.BTNVercolaborador.Text = "Ver Colaborador";
-            this.BTNVercolaborador.UseColumnTextForButtonValue = true;
-            // 
-            // idproyecto
-            // 
-            this.idproyecto.DataPropertyName = "idproyecto";
-            this.idproyecto.HeaderText = "idproyecto";
-            this.idproyecto.Name = "idproyecto";
-            this.idproyecto.ReadOnly = true;
-            this.idproyecto.Width = 80;
-            // 
-            // nombreproyecto
-            // 
-            this.nombreproyecto.DataPropertyName = "nombreproyecto";
-            this.nombreproyecto.HeaderText = "nombreproyecto";
-            this.nombreproyecto.Name = "nombreproyecto";
-            this.nombreproyecto.ReadOnly = true;
-            // 
-            // nombrelineanegocio
-            // 
-            this.nombrelineanegocio.DataPropertyName = "nombrelineanegocio";
-            this.nombrelineanegocio.HeaderText = "nombrelineanegocio";
-            this.nombrelineanegocio.Name = "nombrelineanegocio";
-            this.nombrelineanegocio.ReadOnly = true;
-            // 
-            // nombredireccion
-            // 
-            this.nombredireccion.DataPropertyName = "nombredireccion";
-            this.nombredireccion.HeaderText = "nombredireccion";
-            this.nombredireccion.Name = "nombredireccion";
-            this.nombredireccion.ReadOnly = true;
-            // 
-            // nombrescolaborador2
-            // 
-            this.nombrescolaborador2.DataPropertyName = "nombrescolaborador";
-            this.nombrescolaborador2.HeaderText = "nombrescolaborador";
-            this.nombrescolaborador2.Name = "nombrescolaborador2";
-            this.nombrescolaborador2.ReadOnly = true;
-            // 
-            // apellidoscolaborador2
-            // 
-            this.apellidoscolaborador2.DataPropertyName = "apellidoscolaborador";
-            this.apellidoscolaborador2.HeaderText = "apellidoscolaborador";
-            this.apellidoscolaborador2.Name = "apellidoscolaborador2";
-            this.apellidoscolaborador2.ReadOnly = true;
-            // 
-            // idcodigocolaborador2
-            // 
-            this.idcodigocolaborador2.DataPropertyName = "idcodigocolaborador";
-            this.idcodigocolaborador2.HeaderText = "idcodigocolaborador";
-            this.idcodigocolaborador2.Name = "idcodigocolaborador2";
-            this.idcodigocolaborador2.ReadOnly = true;
-            // 
-            // Asignar_Colaborador
-            // 
-            this.Asignar_Colaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Asignar_Colaborador.HeaderText = "";
-            this.Asignar_Colaborador.Name = "Asignar_Colaborador";
-            this.Asignar_Colaborador.ReadOnly = true;
-            this.Asignar_Colaborador.Text = "Asignar Colaboradores";
-            this.Asignar_Colaborador.UseColumnTextForButtonValue = true;
-            this.Asignar_Colaborador.Width = 140;
-            // 
-            // Ver_Proyecto
-            // 
-            this.Ver_Proyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Ver_Proyecto.HeaderText = "";
-            this.Ver_Proyecto.Name = "Ver_Proyecto";
-            this.Ver_Proyecto.ReadOnly = true;
-            this.Ver_Proyecto.Text = "Ver Proyecto";
-            this.Ver_Proyecto.UseColumnTextForButtonValue = true;
-            this.Ver_Proyecto.Width = 80;
-            // 
             // InicioBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,6 +693,7 @@
             this.metroPanel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.directoryDBDataSet1)).EndInit();
@@ -702,12 +722,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn salariocolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tarifarealcolaboradorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ingresoxclarocolaboradorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numerodocumentocolaboradorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombretipodocumentoDataGridViewTextBoxColumn;
         private DirectoryDBDataSet directoryDBDataSet1;
         private DirectoryDBDataSet directoryDBDataSet;
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private DirectoryDBDataSetTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerodocumentocolaboradorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombretipodocumentoDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private System.Windows.Forms.BindingSource dataTable1BindingSource1;
         private System.Windows.Forms.BindingSource directoryDBDataSetBindingSource;
@@ -750,5 +770,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idcodigocolaborador2;
         private System.Windows.Forms.DataGridViewButtonColumn Asignar_Colaborador;
         private System.Windows.Forms.DataGridViewButtonColumn Ver_Proyecto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

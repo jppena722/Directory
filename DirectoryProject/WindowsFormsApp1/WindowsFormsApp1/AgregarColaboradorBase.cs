@@ -162,7 +162,8 @@ namespace WindowsFormsApp1
 
         private void TBCodigoColaborador_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            var regex = new Regex(@"[0-9\s\b]");
+            if (!regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -170,7 +171,8 @@ namespace WindowsFormsApp1
 
         private void TBApellidosColaborador_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            var regex = new Regex(@"[a-zA-Z\s\b]");
+            if (!regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -187,7 +189,11 @@ namespace WindowsFormsApp1
 
         private void TBMovilColaborador_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            var regex = new Regex(@"[0-9\b+]");
+            if (!regex.IsMatch(e.KeyChar.ToString()) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void metroButton4_Click(object sender, EventArgs e)
@@ -197,19 +203,7 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
 
-        }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

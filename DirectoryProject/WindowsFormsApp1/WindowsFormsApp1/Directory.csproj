@@ -107,6 +107,12 @@
     <Compile Include="AgregarProyectoBase.Designer.cs">
       <DependentUpon>AgregarProyectoBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignarColaborador_Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignarColaborador_Proyecto.Designer.cs">
+      <DependentUpon>AsignarColaborador_Proyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlColaborador.cs" />
     <Compile Include="ControlProyecto.cs" />
     <Compile Include="DBConection.cs" />
@@ -132,11 +138,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeleccionarColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarColaborador.Designer.cs">
+      <DependentUpon>SeleccionarColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerColaborador.Designer.cs">
+      <DependentUpon>VerColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerProyecto.Designer.cs">
+      <DependentUpon>VerProyecto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarColaboradorBase.resx">
       <DependentUpon>AgregarColaboradorBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProyectoBase.resx">
       <DependentUpon>AgregarProyectoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsignarColaborador_Proyecto.resx">
+      <DependentUpon>AsignarColaborador_Proyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IdentificadorBase.resx">
       <DependentUpon>IdentificadorBase.cs</DependentUpon>
@@ -153,6 +180,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SeleccionarColaborador.resx">
+      <DependentUpon>SeleccionarColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerColaborador.resx">
+      <DependentUpon>VerColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerProyecto.resx">
+      <DependentUpon>VerProyecto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DirectoryDBDataSet.xsc">
       <DependentUpon>DirectoryDBDataSet.xsd</DependentUpon>
     </None>
