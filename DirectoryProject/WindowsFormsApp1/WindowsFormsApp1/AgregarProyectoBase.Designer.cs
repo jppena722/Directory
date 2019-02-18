@@ -236,8 +236,6 @@
             // 
             // CBGerenteProyecto
             // 
-            this.CBGerenteProyecto.DataSource = this.colaboradoresBindingSource;
-            this.CBGerenteProyecto.DisplayMember = "nombrescolaborador";
             this.CBGerenteProyecto.FormattingEnabled = true;
             this.CBGerenteProyecto.ItemHeight = 23;
             this.CBGerenteProyecto.Location = new System.Drawing.Point(521, 276);
@@ -245,7 +243,7 @@
             this.CBGerenteProyecto.Size = new System.Drawing.Size(362, 29);
             this.CBGerenteProyecto.TabIndex = 120;
             this.CBGerenteProyecto.UseSelectable = true;
-            this.CBGerenteProyecto.ValueMember = "idcodigocolaborador";
+            this.CBGerenteProyecto.SelectedIndexChanged += new System.EventHandler(this.CBGerenteProyecto_SelectedIndexChanged);
             // 
             // colaboradoresBindingSource
             // 

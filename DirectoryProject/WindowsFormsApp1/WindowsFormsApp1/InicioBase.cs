@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 7)
             {
                 DataGridViewRow row = this.metroGrid1.Rows[e.RowIndex];
                 string codigocolaborador = row.Cells["idcodigocolaborador"].Value.ToString();
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
 
         private void metroGrid2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 7)
             {
                 DataGridViewRow row = this.metroGrid2.Rows[e.RowIndex];
                 string codigoproyecto = row.Cells["idproyecto"].Value.ToString();
@@ -100,16 +100,6 @@ namespace WindowsFormsApp1
                 VerProyecto verProyecto = new VerProyecto();
                 verProyecto.Show();
             }
-
-            if (e.ColumnIndex == 7)
-            {
-                DataGridViewRow row = this.metroGrid2.Rows[e.RowIndex];
-                string codigoproyecto = row.Cells["idproyecto"].Value.ToString();
-                ControlProyecto.idproyecto = int.Parse(codigoproyecto);
-                AsignarColaborador_Proyecto asignarColaborador_Proyecto = new AsignarColaborador_Proyecto();
-                asignarColaborador_Proyecto.ShowDialog();
-            }
-
         }
 
         private void button3_Click_2(object sender, EventArgs e)

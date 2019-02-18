@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         private void AsignarColaborador_Proyecto_Load(object sender, EventArgs e)
         {
-            var select = string.Format("SELECT idcodigocolaborador,apellidoscolaborador, nombrescolaborador, roles.nombrerol FROM colaboradores INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador");
+            var select = string.Format("SELECT colaboradores.idcodigocolaborador, colaboradores.apellidoscolaborador, colaboradores.nombrescolaborador, roles.nombrerol FROM Colaboradores INNER JOIN roles ON roles.idrol = colaboradores.idrolcolaborador WHERE NOT EXISTS(SELECT FROM proyectos_colaboradores WHERE  proyectos_colaboradores.idcodigocolaborador = colaboradores.idcodigocolaborador AND proyectos_Colaboradores.idproyecto = '{0}' )",ControlProyecto.idproyecto);
             var c = DBConection.ObtenerConexion();
             var dataAdapter = new NpgsqlDataAdapter(select, c);
 
@@ -77,6 +77,16 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(exc.Message);
             }
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

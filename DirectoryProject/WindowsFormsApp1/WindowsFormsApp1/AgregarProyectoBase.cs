@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
 using System.Text.RegularExpressions;
+using Conexion;
+using Npgsql;
 
 namespace WindowsFormsApp1
 {
@@ -31,6 +33,17 @@ namespace WindowsFormsApp1
             this.lineanegociosTableAdapter.Fill(this.directoryDBDataSet.lineanegocios);
             // TODO: esta línea de código carga datos en la tabla 'directoryDBDataSet.colaboradores' Puede moverla o quitarla según sea necesario.
             this.colaboradoresTableAdapter.Fill(this.directoryDBDataSet.colaboradores);
+
+            var select = string.Format("SELECT idcodigocolaborador, apellidoscolaborador, nombrescolaborador FROM colaboradores WHERE idrolcolaborador = 1");
+            var c = DBConection.ObtenerConexion();
+            var dataAdapter = new NpgsqlDataAdapter(select, c);
+            var commandBuilder = new NpgsqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            CBGerenteProyecto.DataSource = ds.Tables[0];
+            ds.Tables[0].Columns.Add("FullName", typeof(string), "apellidoscolaborador + ' ' + nombrescolaborador");
+            CBGerenteProyecto.ValueMember = "idcodigocolaborador";
+            CBGerenteProyecto.DisplayMember = "FullName";
         }
 
         private void BTRegistrarColaborador_Click(object sender, EventArgs e)
@@ -88,5 +101,9 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void CBGerenteProyecto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

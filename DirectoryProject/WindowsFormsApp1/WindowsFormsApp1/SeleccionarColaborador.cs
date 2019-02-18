@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         private void SeleccionarColaborador_Load(object sender, EventArgs e)
         {
-            var select = string.Format("SELECT idcodigocolaborador,apellidoscolaborador, nombrescolaborador FROM colaboradores");
+            var select = string.Format("SELECT idcodigocolaborador,apellidoscolaborador, nombrescolaborador FROM colaboradores WHERE idrolcolaborador = 1");
             var c = DBConection.ObtenerConexion();
             var dataAdapter = new NpgsqlDataAdapter(select, c);
 

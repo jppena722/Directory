@@ -61,5 +61,17 @@ namespace WindowsFormsApp1
             }
             return comprobador;
         }
+
+        public static int ActualizarProyecto(string pnombreproyecto,object pidlineanegocio,object piddireccionproyecto,object pidgerenteproyecto,int pidproyecto)
+        {
+            int comprobador = 0;
+            NpgsqlConnection conn = DBConection.ObtenerConexion();
+            {
+                NpgsqlCommand Comando = new NpgsqlCommand(string.Format("UPDATE proyectos SET nombreproyecto ='{0}', idlineanegocioproyecto ='{1}', iddireccionproyecto ='{2}', idgerenteproyecto ='{3}' WHERE idproyecto = '{4}'", pnombreproyecto, pidlineanegocio, piddireccionproyecto, pidgerenteproyecto, pidproyecto), conn);
+                comprobador = Comando.ExecuteNonQuery();
+            }
+            return comprobador;
+
+        }
     }
 }

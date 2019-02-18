@@ -49,8 +49,12 @@ namespace WindowsFormsApp1
             TBTarifaxclaroColaborador.Value = int.Parse(ControlColaborador.ingresoxclarocolaborador.ToString());
             DTFechaingresoColaborador.Value = DateTime.Parse(ControlColaborador.fechaingresocolaborador.ToString());
 
+            CargarGrid();
+        }
+        private void CargarGrid()
+        {
             var select = string.Format("SELECT proyectos_colaboradores.idproyecto, proyectos.nombreproyecto FROM proyectos_colaboradores  INNER JOIN colaboradores on colaboradores.idcodigocolaborador = proyectos_colaboradores.idcodigocolaborador INNER JOIN proyectos on proyectos.idproyecto = proyectos_colaboradores.idproyecto WHERE colaboradores.idcodigocolaborador = {0}", ControlColaborador.codigocolaborador.ToString());
-            var c = DBConection.ObtenerConexion(); 
+            var c = DBConection.ObtenerConexion();
             var dataAdapter = new NpgsqlDataAdapter(select, c);
 
             var commandBuilder = new NpgsqlCommandBuilder(dataAdapter);
@@ -64,7 +68,6 @@ namespace WindowsFormsApp1
             metroGrid1.Columns["DGVBCdesasignarproyecto"].DisplayIndex = 2;
             metroGrid1.Columns["DGVBCverproyecto"].DisplayIndex = 3;
         }
-
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -136,6 +139,24 @@ namespace WindowsFormsApp1
             DTFechaingresoColaborador.Value = DateTime.Parse(ControlColaborador.fechaingresocolaborador.ToString());
         }
 
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ControlProyecto.idproyecto = int.Parse(ControlProyecto.idproyecto.ToString());
+            AsignarProyecto_Colaborador asignarProyectoColaborador = new AsignarProyecto_Colaborador();
+            asignarProyectoColaborador.ShowDialog();
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Seleccion de los botones pendientes 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            CargarGrid();
+        }
+
         private void metroButton1_Click(object sender, EventArgs e)
         {
             if (TBCodigoColaborador.Text != "")
@@ -169,7 +190,7 @@ namespace WindowsFormsApp1
                                                 {
                                                     errorProvider9.Clear();
                                                         ControlColaborador.ActualizarColaborador(int.Parse(TBCodigoColaborador.Text), TBNombresColaborador.Text, TBApellidosColaborador.Text, CBTipodocumentoColaborador.SelectedValue, TBDocumentoColaborador.Text, CBEstadoColaborador.SelectedValue, CBRolColaborador.SelectedValue, TBCorreoColaborador.Text, TBMovilColaborador.Text, TBPisoColaborador.Text, TBPuestoColaborador.Text, DTFechaingresoColaborador.Value, TBSalarioColaborador.Value, TBTarifarealColaborador.Value, TBTarifaxclaroColaborador.Value);
-                                                        MetroMessageBox.Show(this, "El Colaborador ha sido actualizado exitosamente", "Actualizacion Exitoso", MessageBoxButtons.OK);
+                                                        MetroMessageBox.Show(this, "El Colaborador ha sido actualizado exitosamente", "Actualizacion Exitosa", MessageBoxButtons.OK);
                                                         this.Close();
                                                 }
                                                 else
@@ -189,7 +210,6 @@ namespace WindowsFormsApp1
                                             MetroMessageBox.Show(this, "El campo Tarifa Real debe de ser un numero superior igual o superior a 0", "Ha ocurrido un error en la edicion", MessageBoxButtons.OK);
                                             errorProvider7.SetError(TBSalarioColaborador, "Por favor ingrese un Numero Valido");
                                         }
-
                                     }
                                     else
                                     {
@@ -270,7 +290,6 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }
         }
-
     }
 }
 

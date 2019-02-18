@@ -1,0 +1,12 @@
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.AgregarColaboradorBase.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.AgregarProyectoBase.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.AsignarColaborador_Proyecto.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.AsignarProyecto_Colaborador.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.IdentificadorBase.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.InicioBase.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.SeleccionarColaborador.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.VerColaborador.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.VerProyecto.resources
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Directory.csproj.GenerateResource.cache
+C:\Users\penajp\Documents\GitHub\Directory\DirectoryProject\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Directory.csproj.CoreCompileInputs.cache

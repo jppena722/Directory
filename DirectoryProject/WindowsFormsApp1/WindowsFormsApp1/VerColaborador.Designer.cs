@@ -75,6 +75,8 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.DGVBCdesasignarproyecto = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DGVBCverproyecto = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tipodocumentosTableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.tipodocumentosTableAdapter();
             this.estadosTableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.estadosTableAdapter();
             this.rolesTableAdapter = new WindowsFormsApp1.DirectoryDBDataSetTableAdapters.rolesTableAdapter();
@@ -87,8 +89,8 @@
             this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.DGVBCdesasignarproyecto = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.DGVBCverproyecto = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,6 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -739,6 +743,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.pictureBox5);
+            this.groupBox3.Controls.Add(this.pictureBox4);
             this.groupBox3.Controls.Add(this.metroGrid1);
             this.groupBox3.Location = new System.Drawing.Point(313, 235);
             this.groupBox3.Name = "groupBox3";
@@ -776,11 +782,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(3, 16);
+            this.metroGrid1.Location = new System.Drawing.Point(3, 47);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -794,8 +799,27 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(443, 167);
+            this.metroGrid1.Size = new System.Drawing.Size(443, 136);
             this.metroGrid1.TabIndex = 42;
+            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+            // 
+            // DGVBCdesasignarproyecto
+            // 
+            this.DGVBCdesasignarproyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DGVBCdesasignarproyecto.HeaderText = "";
+            this.DGVBCdesasignarproyecto.Name = "DGVBCdesasignarproyecto";
+            this.DGVBCdesasignarproyecto.ReadOnly = true;
+            this.DGVBCdesasignarproyecto.Text = "Desasignar";
+            this.DGVBCdesasignarproyecto.UseColumnTextForButtonValue = true;
+            // 
+            // DGVBCverproyecto
+            // 
+            this.DGVBCverproyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DGVBCverproyecto.HeaderText = "";
+            this.DGVBCverproyecto.Name = "DGVBCverproyecto";
+            this.DGVBCverproyecto.ReadOnly = true;
+            this.DGVBCverproyecto.Text = "Ver Proyecto";
+            this.DGVBCverproyecto.UseColumnTextForButtonValue = true;
             // 
             // tipodocumentosTableAdapter
             // 
@@ -845,23 +869,29 @@
             // 
             this.errorProvider9.ContainerControl = this;
             // 
-            // DGVBCdesasignarproyecto
+            // pictureBox4
             // 
-            this.DGVBCdesasignarproyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DGVBCdesasignarproyecto.HeaderText = "";
-            this.DGVBCdesasignarproyecto.Name = "DGVBCdesasignarproyecto";
-            this.DGVBCdesasignarproyecto.ReadOnly = true;
-            this.DGVBCdesasignarproyecto.Text = "Desasignar";
-            this.DGVBCdesasignarproyecto.UseColumnTextForButtonValue = true;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(413, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 43;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // DGVBCverproyecto
+            // pictureBox5
             // 
-            this.DGVBCverproyecto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DGVBCverproyecto.HeaderText = "";
-            this.DGVBCverproyecto.Name = "DGVBCverproyecto";
-            this.DGVBCverproyecto.ReadOnly = true;
-            this.DGVBCverproyecto.Text = "Ver Proyecto";
-            this.DGVBCverproyecto.UseColumnTextForButtonValue = true;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(377, 15);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 44;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // VerColaborador
             // 
@@ -898,6 +928,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -960,5 +992,7 @@
         private MetroFramework.Controls.MetroTextBox TBMovilColaborador;
         private System.Windows.Forms.DataGridViewButtonColumn DGVBCdesasignarproyecto;
         private System.Windows.Forms.DataGridViewButtonColumn DGVBCverproyecto;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

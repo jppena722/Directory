@@ -34,10 +34,22 @@ namespace WindowsFormsApp1
             TBNombreProyecto.Text = ControlProyecto.nombreproyecto.ToString();
             CBLineanegocioProyecto.SelectedValue = ControlProyecto.idlineanegocioproyecto.ToString();
             CBDireccionProyecto.SelectedValue = ControlProyecto.iddireccionproyecto.ToString();
-            MLApellidosGerente.Text = ControlProyecto.apellidosgerente.ToString();
-            MLNombresGerente.Text = ControlProyecto.nombresgerente.ToString();
-            
-            var select = string.Format("SELECT proyectos_colaboradores.idcodigocolaborador, colaboradores.apellidoscolaborador, colaboradores.nombrescolaborador FROM proyectos_colaboradores  INNER JOIN colaboradores on colaboradores.idcodigocolaborador = proyectos_colaboradores.idcodigocolaborador INNER JOIN proyectos on proyectos.idproyecto = proyectos_colaboradores.idproyecto WHERE proyectos.idproyecto = {0}",ControlProyecto.idproyecto.ToString());
+            var select = string.Format("SELECT idcodigocolaborador, apellidoscolaborador, nombrescolaborador FROM colaboradores WHERE idcodigocolaborador = {0}",ControlProyecto.idgerenteproyecto.ToString());
+            var c = DBConection.ObtenerConexion();
+            var dataAdapter = new NpgsqlDataAdapter(select, c);
+            var commandBuilder = new NpgsqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            CBGerenteProyecto.DataSource = ds.Tables[0];
+            ds.Tables[0].Columns.Add("FullName", typeof(string), "apellidoscolaborador + ' ' + nombrescolaborador");
+            CBGerenteProyecto.ValueMember = "idcodigocolaborador";
+            CBGerenteProyecto.DisplayMember = "FullName";
+
+            CargarGrid();
+        }
+        private void CargarGrid()
+        {
+            var select = string.Format("SELECT proyectos_colaboradores.idcodigocolaborador, colaboradores.apellidoscolaborador, colaboradores.nombrescolaborador FROM proyectos_colaboradores  INNER JOIN colaboradores on colaboradores.idcodigocolaborador = proyectos_colaboradores.idcodigocolaborador INNER JOIN proyectos on proyectos.idproyecto = proyectos_colaboradores.idproyecto WHERE proyectos.idproyecto = {0}", ControlProyecto.idproyecto.ToString());
             var c = DBConection.ObtenerConexion();
             var dataAdapter = new NpgsqlDataAdapter(select, c);
 
@@ -59,10 +71,24 @@ namespace WindowsFormsApp1
             TBNombreProyecto.Enabled = true;
             CBLineanegocioProyecto.Enabled = true;
             CBDireccionProyecto.Enabled = true;
-            pictureBox1.Visible = true;
+            CBGerenteProyecto.Enabled = true;
             pictureBox2.Visible = false;
             pictureBox3.Visible = true;
             pictureBox3.Enabled = true;
+            metroButton1.Visible = true;
+            metroButton1.Enabled = true;
+            CBGerenteProyecto.Text = "Seleccionar nuevo";
+
+            var select = string.Format("SELECT idcodigocolaborador, apellidoscolaborador, nombrescolaborador FROM colaboradores WHERE idrolcolaborador = 1");
+            var c = DBConection.ObtenerConexion();
+            var dataAdapter = new NpgsqlDataAdapter(select, c);
+            var commandBuilder = new NpgsqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            CBGerenteProyecto.DataSource = ds.Tables[0];
+            ds.Tables[0].Columns.Add("FullName", typeof(string), "apellidoscolaborador + ' ' + nombrescolaborador");
+            CBGerenteProyecto.ValueMember = "idcodigocolaborador";
+            CBGerenteProyecto.DisplayMember = "FullName";
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -70,22 +96,63 @@ namespace WindowsFormsApp1
             TBNombreProyecto.Enabled = false;
             CBLineanegocioProyecto.Enabled = false;
             CBDireccionProyecto.Enabled = false;
-            pictureBox1.Visible = false;
+            CBGerenteProyecto.Enabled = false;
             pictureBox2.Visible = true;
             pictureBox3.Visible = false;
+            metroButton1.Visible = false;
+            metroButton1.Enabled = false;
 
             TBCodigoProyecto.Text = ControlProyecto.idproyecto.ToString();
             TBNombreProyecto.Text = ControlProyecto.nombreproyecto.ToString();
             CBLineanegocioProyecto.SelectedValue = ControlProyecto.idlineanegocioproyecto.ToString();
             CBDireccionProyecto.SelectedValue = ControlProyecto.iddireccionproyecto.ToString();
-            MLApellidosGerente.Text = ControlProyecto.apellidosgerente.ToString();
-            MLNombresGerente.Text = ControlProyecto.nombresgerente.ToString();
+            var select = string.Format("SELECT idcodigocolaborador, apellidoscolaborador, nombrescolaborador FROM colaboradores WHERE idcodigocolaborador = {0}", ControlProyecto.idgerenteproyecto.ToString());
+            var c = DBConection.ObtenerConexion();
+            var dataAdapter = new NpgsqlDataAdapter(select, c);
+            var commandBuilder = new NpgsqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            CBGerenteProyecto.DataSource = ds.Tables[0];
+            ds.Tables[0].Columns.Add("FullName", typeof(string), "apellidoscolaborador + ' ' + nombrescolaborador");
+            CBGerenteProyecto.ValueMember = "idcodigocolaborador";
+            CBGerenteProyecto.DisplayMember = "FullName";
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             SeleccionarColaborador seleccionarcolaborador = new SeleccionarColaborador();
             seleccionarcolaborador.ShowDialog();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            CargarGrid();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ControlProyecto.idproyecto = int.Parse(ControlProyecto.idproyecto.ToString());
+            AsignarColaborador_Proyecto asignarColaborador_Proyecto = new AsignarColaborador_Proyecto();
+            asignarColaborador_Proyecto.ShowDialog();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+            ControlProyecto.ActualizarProyecto(TBNombreProyecto.Text, CBLineanegocioProyecto.SelectedValue, CBDireccionProyecto.SelectedValue, CBGerenteProyecto.SelectedValue,int.Parse(TBCodigoProyecto.Text));
+            MetroMessageBox.Show(this, "El Proyecto ha sido actualizado exitosamente", "Actualizacion Exitosa", MessageBoxButtons.OK);
+            this.Close();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CBGerenteProyecto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

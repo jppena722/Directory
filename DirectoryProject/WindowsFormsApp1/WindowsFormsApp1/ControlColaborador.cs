@@ -68,6 +68,17 @@ namespace WindowsFormsApp1
             conn.Dispose();
         }
 
+        public static int AsignarProyecto(int pidproyecto,int pcodigocolaborador)
+        {
+            int comprobador = 0;
+            NpgsqlConnection conn = DBConection.ObtenerConexion();
+            {
+                NpgsqlCommand Comando = new NpgsqlCommand(string.Format("INSERT INTO proyectos_colaboradores(idproyecto, idcodigocolaborador) VALUES( '{0}', '{1}')", pidproyecto, pcodigocolaborador), conn);
+                comprobador = Comando.ExecuteNonQuery();
+            }
+            return comprobador;
+        }
+
         public static int Usuarioregistrado(string codigocolaborador, string documentocolaborador)
         {
             int contador = 0;
@@ -118,7 +129,6 @@ namespace WindowsFormsApp1
                 NpgsqlCommand Comando = new NpgsqlCommand(string.Format("UPDATE colaboradores SET  nombrescolaborador ='{1}', apellidoscolaborador ='{2}', idtipodocumentocolaborador ='{3}', numerodocumentocolaborador ='{4}', idestadocolaborador ='{5}', idrolcolaborador ='{6}', correocolaborador ='{7}', movilcolaborador ='{8}', pisocolaborador ='{9}', puestocolaborador ='{10}', fechaingresocolaborador ='{11}', salariocolaborador ='{12}', tarifarealcolaborador ='{13}', ingresoxclarocolaborador ='{14}' WHERE idcodigocolaborador = '{0}'", CodigoColaborador, NombresColaborador, ApellidosColaborador, TipodocumentoColaborador, DocumentoColaborador, EstadoColaborador, RolColaborador, CorreoColaborador, MovilColaborador, PisoColaborador, PuestoColaborador, Date, SalarioColaborador, TarifarealColaborador, TarifaxclaroColaborador), conn);
                 comprobador = Comando.ExecuteNonQuery();
             }
-
             return comprobador;
         }
 
@@ -147,8 +157,6 @@ namespace WindowsFormsApp1
             salariocolaborador = int.Parse(reader["salariocolaborador"].ToString());
             tarifarealcolaborador = int.Parse(reader["tarifarealcolaborador"].ToString());
             ingresoxclarocolaborador = int.Parse(reader["ingresoxclarocolaborador"].ToString());
-
-
         }
     }
 }
